@@ -3,7 +3,7 @@
   <a href="https://harsh07-portfolio.netlify.app/ " target="_blank">HarshPrajapati.tech</a>
 </h2>
 <div align="center">
-  <img alt="Demo" src="/demo.png" />
+  <img alt="Demo" src="/public/demo.png" />
 </div>
 
 <br/>
