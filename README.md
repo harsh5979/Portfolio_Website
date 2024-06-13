@@ -15,18 +15,18 @@
 
 <h3 align="center">
     🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
+    <a href="https://github.com/harsh5979/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
     🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
+    <a href="https://github.com/harsh5979/Portfolio/issues">Request Feature</a>
 </h3>
 
 ## TL;DR
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [harsh5979](https://github.com/harsh5979/Portfolio). Thanks!
 
 ## Built With
 
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
+My personal portfolio <a href="https://harsh07-portfolio.netlify.app/" target="_blank">Harsh.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
 
 This project was built using these technologies.
 
@@ -35,7 +35,7 @@ This project was built using these technologies.
 - Express.js
 - CSS3
 - VsCode
-- Vercel
+- Netlify
 
 ## Features
 
@@ -64,6 +64,3 @@ The page will reload if you make edits.
 Open the project folder and Navigate to `/src/components/`. <br/>
 You will find all the components used and you can edit your information accordingly.
 
-### Show your support
-
-Give a ⭐ if you like this website!
