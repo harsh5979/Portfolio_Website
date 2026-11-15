@@ -1,9 +1,9 @@
 import { GithubIcon, LinkedinIcon } from '../components/BrandIcons';
 import { personalInfo } from '../data/personal';
 
-export function Footer() {
-  const year = new Date().getFullYear();
+const CURRENT_YEAR = new Date().getFullYear();
 
+export function Footer() {
   return (
     <footer
       className="border-t border-border py-8"
@@ -16,7 +16,7 @@ export function Footer() {
           </span>
           <span className="text-text-muted text-xs">·</span>
           <span className="text-text-muted text-xs">
-            © {year} {personalInfo.name}. All rights reserved.
+            © {CURRENT_YEAR} {personalInfo.name}. All rights reserved.
           </span>
         </div>
 
