@@ -1,12 +1,15 @@
 export interface Project {
   id: string;
   title: string;
+  category?: string;
+  status?: string;
   period: string;
   description: string;
   features: string[];
   stack: string[];
   githubUrl: string;
   liveUrl: string;
+  liveLabel?: string;
   featured: boolean;
 }
 

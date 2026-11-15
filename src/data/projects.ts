@@ -2,13 +2,35 @@ import type { Project } from '../types';
 
 export const projects: Project[] = [
   {
+    id: 'northsoul-clothing',
+    title: 'NorthSoul Clothing',
+    category: 'Full Stack E-Commerce',
+    status: 'Live Production',
+    period: 'Oct 2025 – Nov 2025',
+    description:
+      'A production direct-to-consumer winter wear apparel shopping platform engineered for fast browsing, resilient cart synchronization, persistent customer checkout pipelines, and automated order fulfillment tracking.',
+    features: [
+      'Full-stack shopping experience with add-to-cart, persistent checkout pipelines, and order tracking',
+      'Google Authentication (OAuth) for secure, low-latency customer login and session handling',
+      'PhonePe payment gateway API integration for real-time online customer transaction processing',
+      'Admin catalog management, inventory reserve locks, and structured SEO / schema data',
+    ],
+    stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'PhonePe', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/harsh5979/iomd',
+    liveUrl: 'https://northsoulclothing.site',
+    liveLabel: 'northsoulclothing.site',
+    featured: true,
+  },
+  {
     id: 'automatic-deployment-platform',
     title: 'Automatic Deployment Platform',
+    category: 'DevOps & Cloud Automation',
+    status: 'System Architecture',
     period: 'Aug 2025 – Sep 2025',
     description:
       'A self-hosted deployment automation engine that clones GitHub repositories, compiles projects, generates isolated Docker containers, and exposes them through dynamic Nginx reverse proxy routing with unique subdomain endpoints.',
     features: [
-      'Automated Git repository cloning and multi-stage builds',
+      'Automated Git repository cloning and multi-stage container builds',
       'Dynamic Docker container lifecycle orchestration and resource throttling',
       'Dynamic port allocation and Nginx reverse proxy routing with automated virtual hosts',
       'Real-time deployment log streaming, heartbeat health checks, and failure alerting',
@@ -20,25 +42,10 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: 'northsoul-clothing',
-    title: 'NorthSoul Clothing (E-Commerce Platform)',
-    period: 'Oct 2025 – Nov 2025',
-    description:
-      'A full-stack direct-to-consumer winter wear shopping platform featuring high-performance catalog browsing, persistent customer carts, address management, and zero-drop checkout pipelines.',
-    features: [
-      'Full-stack shopping experience with add-to-cart, persistent checkout pipelines, and order tracking',
-      'Google Authentication (OAuth) for secure, low-latency customer login and session handling',
-      'PhonePe payment gateway API integration for real-time online customer transaction processing',
-      'Admin catalog management, inventory reserve locks, and structured SEO / schema data',
-    ],
-    stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'PhonePe', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/harsh5979/iomd',
-    liveUrl: 'https://northsoulclothing.site',
-    featured: true,
-  },
-  {
     id: 'e-mess-modasa',
-    title: 'E-Mess-Modasa (Hostel Management Platform)',
+    title: 'E-Mess-Modasa',
+    category: 'Hostel Billing SaaS',
+    status: 'Live Production',
     period: 'Sep 2024 – Present',
     description:
       'A production hostel billing and student fee management platform developed for campus hostels to eliminate paper records, prevent fee defaults, and automate financial reporting.',
@@ -51,11 +58,14 @@ export const projects: Project[] = [
     stack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Razorpay'],
     githubUrl: 'https://github.com/harsh5979',
     liveUrl: 'https://emessmodasa.in',
+    liveLabel: 'emessmodasa.in',
     featured: true,
   },
   {
     id: 'blockchain-freelance-platform',
     title: 'Blockchain Freelance Platform',
+    category: 'Web3 & Smart Contracts',
+    status: 'Decentralized dApp',
     period: 'Jan 2024 – Mar 2024',
     description:
       'A decentralized freelance marketplace connecting clients and freelancers directly through verifiable Ethereum smart contracts, eliminating intermediary commissions and payment disputes.',
@@ -72,6 +82,8 @@ export const projects: Project[] = [
   {
     id: 'clinic-appointment-booking',
     title: 'Clinic Appointment Booking System',
+    category: 'Healthcare Management',
+    status: 'Web Application',
     period: 'Jun 2024 – Jul 2024',
     description:
       'A patient appointment management application streamlining clinical workflow from patient onboarding to slot selection, payment collection, and electronic queue management.',
@@ -89,6 +101,8 @@ export const projects: Project[] = [
   {
     id: 'home-automation',
     title: 'IoT Home Automation System',
+    category: 'Embedded IoT & Cloud',
+    status: 'Hardware Prototype',
     period: 'Oct 2021 – Dec 2021',
     description:
       'An embedded IoT system for remote appliance monitoring and power control built with the ESP8266 microcontroller and a responsive web dashboard.',
@@ -104,7 +118,9 @@ export const projects: Project[] = [
   },
   {
     id: 'event-ticketing-platform',
-    title: 'Event Ticketing & Verification Platform',
+    title: 'Event Ticketing & Verification',
+    category: 'Event Operations',
+    status: 'Web & Scanner',
     period: 'Feb 2024 – Apr 2024',
     description:
       'An event ticketing platform featuring cryptographic QR code generation and an on-site scanner application for instant attendee gate check-in.',

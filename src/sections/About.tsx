@@ -1,27 +1,28 @@
 import { AnimatedSection } from '../components/AnimatedSection';
 import { SectionTitle } from '../components/SectionTitle';
-import { Code2, Server, Cloud, Cpu } from 'lucide-react';
+import { Code2, Server, Cloud, Cpu, Briefcase, GraduationCap } from 'lucide-react';
+import { personalInfo } from '../data/personal';
 
 const specializations = [
   {
     icon: Code2,
     title: 'Full Stack Development',
-    desc: 'React + Node.js end-to-end. I care about the whole picture — not just making things work, but making them work well.',
+    desc: 'React & Next.js frontend architectures paired with Node.js / Express services. Clean state, performance, and responsive UI.',
   },
   {
     icon: Server,
-    title: 'Backend Systems',
-    desc: 'REST APIs, authentication, database design, and writing server-side code that scales without surprises.',
+    title: 'Backend Systems & APIs',
+    desc: 'Production REST & WebSocket APIs, JWT/OAuth authentication, database modeling (MongoDB, PostgreSQL), and multi-tenant isolation.',
   },
   {
     icon: Cloud,
-    title: 'DevOps & Cloud',
-    desc: 'Containers, CI/CD pipelines, AWS, Nginx. I enjoy the infrastructure side as much as the application code.',
+    title: 'DevOps & Deployment',
+    desc: 'Docker containerization, automated Nginx reverse proxy configuration, AWS EC2/S3 cloud infrastructure, and CI/CD automation.',
   },
   {
     icon: Cpu,
-    title: 'Emerging Tech',
-    desc: 'Exploring LLM integration, RAG systems, Web3, and IoT — where the interesting problems tend to be.',
+    title: 'AI & Emerging Tech',
+    desc: 'Production AI resume scoring, real-time voice interview pipelines, RAG systems, and smart payment gateways (Razorpay, PhonePe).',
   },
 ];
 
@@ -33,26 +34,32 @@ export function About() {
         <div>
           <SectionTitle
             label="About"
-            title="A bit about me"
+            title="Software Developer & Systems Builder"
+            subtitle="Bridging modern web applications, scalable backend systems, and deployment automation."
           />
+
           <div className="space-y-4 text-text-secondary text-base leading-relaxed">
-            <p>
-              I'm a final-year Computer Engineering student at GEC Modasa, and I've been building
-              things on the web since my first year. What started as curiosity about how websites
-              work has turned into a focus on building systems that hold up under real conditions.
-            </p>
-            <p>
-              My work sits at the intersection of product and infrastructure. I'll build the React
-              UI, wire up the Node.js API, design the database schema, and then package everything
-              in Docker and push it to a cloud server. I find the whole stack interesting.
-            </p>
-            <p>
-              Lately I've been spending time with LLM integration and RAG pipelines — the overlap
-              between AI tooling and practical software engineering is an area I want to go deeper in.
-            </p>
-            <p className="text-text-muted text-sm">
-              Based in Ahmedabad, Gujarat, India.
-            </p>
+            {personalInfo.bio.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+
+          {/* Quick status pills */}
+          <div className="mt-8 pt-6 border-t border-border grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="flex items-center gap-2.5 text-xs text-text-primary bg-surface border border-border p-3 rounded-lg">
+              <Briefcase size={16} className="text-accent-primary shrink-0" />
+              <div>
+                <div className="font-semibold text-text-primary">Current Role</div>
+                <div className="text-text-muted">Software Developer @ haira.ai</div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs text-text-primary bg-surface border border-border p-3 rounded-lg">
+              <GraduationCap size={16} className="text-accent-primary shrink-0" />
+              <div>
+                <div className="font-semibold text-text-primary">Education</div>
+                <div className="text-text-muted">B.Tech Computer Eng. (GEC Modasa)</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -61,10 +68,10 @@ export function About() {
           {specializations.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-primary transition-colors duration-300 group"
+              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-primary hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 group"
             >
               <Icon
-                size={20}
+                size={22}
                 className="text-accent-primary mb-3 group-hover:scale-110 transition-transform duration-200"
                 aria-hidden="true"
               />

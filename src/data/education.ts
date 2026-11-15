@@ -6,14 +6,14 @@ export const educationList: Education[] = [
     institution: 'Government Engineering College, Modasa',
     university: 'Gujarat Technological University (GTU)',
     location: 'Modasa, Gujarat',
-    period: 'July 2022 – May 2026',
+    period: '2022 – 2026 (Graduated)',
     cgpa: '7.30 / 10.0',
   },
   {
     degree: 'Higher Secondary Education (Science)',
     institution: 'R.C. Patel Higher Secondary School',
     location: 'Gandhinagar, Gujarat',
-    period: 'March 2021 – March 2022',
+    period: '2021 – 2022',
     cgpa: '6.9 / 10.0',
   },
 ];

@@ -43,7 +43,7 @@ export function Hero() {
           <motion.div variants={item}>
             <span className="inline-flex items-center gap-2 text-xs font-medium text-accent-primary tracking-widest uppercase mb-6">
               <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse-slow" aria-hidden="true" />
-              Available for opportunities · {personalInfo.location}
+              Software Developer @ haira.ai · {personalInfo.location}
             </span>
           </motion.div>
 

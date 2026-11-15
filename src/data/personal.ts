@@ -1,15 +1,16 @@
 export const personalInfo = {
   name: 'Harsh Prajapati',
   title: 'Full Stack Developer | Backend Developer | DevOps Engineer',
+  currentRole: 'Software Developer at The Special Character (haira.ai)',
   location: 'Ahmedabad, Gujarat, India',
   email: 'harshprajapati0018@gmail.com',
   phone: '+91 6351068313',
   summary:
-    'Full Stack Developer focused on building scalable web applications, resilient backend architectures, deployment automation, and cloud-native solutions. Experienced in modern JavaScript/TypeScript, Go/Python, Docker, AWS, Linux, and Nginx, with active work in AI-powered systems and RAG pipelines.',
+    'Full Stack & Backend Developer with deep expertise in deployment automation, cloud infrastructure, and AI-powered systems. Currently engineering core hiring automation, voice screening, and RAG evaluation modules at The Special Character (haira.ai).',
   bio: [
-    'I am a Computer Engineering graduate from GEC Modasa (GTU) with hands-on production experience designing, deploying, and maintaining high-throughput systems.',
-    'Currently working as a Software Developer at The Special Character, building core modules for haira.ai — an automated AI hiring and interview platform with voice evaluation, resume ranking, and multi-tenant isolation.',
-    'I enjoy the entire lifecycle of software: from frontend responsiveness and REST/WebSocket APIs, down to container orchestration, automated reverse proxies, and cloud infrastructure.',
+    'I am a Computer Engineering graduate from Government Engineering College, Modasa (GTU). I specialize in designing scalable backend architectures, automated cloud deployments, and resilient web applications.',
+    'Currently, I work as a Software Developer at The Special Character, where I build core production modules for haira.ai — an AI Interview & Recruitment platform that handles automated resume scoring, voice-driven phone screenings, and real-time candidate analytics with strict multi-tenant isolation.',
+    'Outside of work, I build and maintain real-world platforms like NorthSoul Clothing (e-commerce with PhonePe and OAuth) and E-Mess Modasa (campus mess billing automating dues for hundreds of residents), alongside self-hosted CI/CD and container deployment automation tools.',
   ],
   socials: {
     github: 'https://github.com/harsh5979',
