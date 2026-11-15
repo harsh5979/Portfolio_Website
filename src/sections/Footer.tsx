@@ -12,7 +12,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <span className="text-sm font-bold text-text-primary">
-            harsh<span className="text-accent-purple">.</span>dev
+            harsh<span className="text-accent-primary">.</span>dev
           </span>
           <span className="text-text-muted text-xs">·</span>
           <span className="text-text-muted text-xs">

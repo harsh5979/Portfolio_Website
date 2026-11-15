@@ -67,14 +67,14 @@ export function DevOps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-purple transition-colors duration-300 group"
+              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-primary transition-colors duration-300 group"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div
-                  className="w-8 h-8 rounded-lg bg-accent-purple-dim flex items-center justify-center group-hover:scale-110 transition-transform duration-200"
+                  className="w-8 h-8 rounded-lg bg-accent-primary-dim flex items-center justify-center group-hover:scale-110 transition-transform duration-200"
                   aria-hidden="true"
                 >
-                  <Icon size={16} className="text-accent-purple" />
+                  <Icon size={16} className="text-accent-primary" />
                 </div>
                 <h3 className="text-sm font-semibold text-text-primary">{title}</h3>
               </div>
@@ -94,7 +94,7 @@ export function DevOps() {
         </div>
 
         {/* Highlight box */}
-        <div className="mt-10 p-6 rounded-xl border border-accent-purple border-opacity-30 bg-accent-purple-dim">
+        <div className="mt-10 p-6 rounded-xl border border-accent-primary/30 bg-accent-primary-dim">
           <h3 className="text-sm font-semibold text-text-primary mb-2">
             Automatic Deployment System
           </h3>

@@ -16,7 +16,7 @@ const Footer = lazy(() => import('./sections/Footer').then((m) => ({ default: m.
 function SectionFallback() {
   return (
     <div className="flex items-center justify-center py-32" aria-hidden="true">
-      <div className="w-6 h-6 rounded-full border-2 border-accent-purple border-t-transparent animate-spin" />
+      <div className="w-6 h-6 rounded-full border-2 border-accent-primary border-t-transparent animate-spin" />
     </div>
   );
 }

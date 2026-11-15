@@ -57,10 +57,10 @@ export function Navbar() {
         <a
           href="#hero"
           onClick={(e) => { e.preventDefault(); handleNavClick('#hero'); }}
-          className="text-sm font-bold text-text-primary hover:text-accent-purple transition-colors duration-200"
+          className="text-sm font-bold text-text-primary hover:text-accent-primary transition-colors duration-200"
           aria-label={`${personalInfo.name} - Home`}
         >
-          harsh<span className="text-accent-purple">.</span>dev
+          harsh<span className="text-accent-primary">.</span>dev
         </a>
 
         {/* Desktop nav */}
@@ -75,7 +75,7 @@ export function Navbar() {
                   onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
                   className={`px-3 py-1.5 text-sm rounded-md transition-colors duration-200 ${
                     isActive
-                      ? 'text-accent-purple bg-accent-purple-dim'
+                      ? 'text-accent-primary bg-accent-primary-dim font-medium'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
@@ -91,7 +91,7 @@ export function Navbar() {
         <a
           href={personalInfo.resumeUrl}
           download
-          className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text-primary hover:border-accent-purple hover:text-accent-purple transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary transition-colors duration-200"
           aria-label="Download resume"
         >
           <Download size={14} />
@@ -134,7 +134,7 @@ export function Navbar() {
                       onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
                       className={`block px-4 py-2.5 text-sm rounded-lg transition-colors duration-200 ${
                         isActive
-                          ? 'text-accent-purple bg-accent-purple-dim'
+                          ? 'text-accent-primary bg-accent-primary-dim font-medium'
                           : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
                       }`}
                       aria-current={isActive ? 'page' : undefined}

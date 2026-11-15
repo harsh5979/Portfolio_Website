@@ -11,25 +11,33 @@ export default {
       },
       colors: {
         background: '#0a0a0a',
-        surface: '#111111',
-        'surface-2': '#1a1a1a',
-        border: '#2a2a2a',
+        surface: '#121212',
+        'surface-2': '#18181b',
+        border: '#27272a',
         accent: {
-          purple: '#8b5cf6',
+          primary: '#0ea5e9',       // Clean, high-tech electric sky blue
+          'primary-hover': '#0284c7',
+          'primary-dim': '#0ea5e918',
+          secondary: '#38bdf8',     // Crisp ice blue
+          'secondary-dim': '#38bdf818',
+          cyan: '#06b6d4',
           blue: '#3b82f6',
-          'purple-dim': '#8b5cf620',
-          'blue-dim': '#3b82f620',
+          // Backward-compatible aliases
+          purple: '#0ea5e9',
+          'purple-dim': '#0ea5e918',
         },
         text: {
-          primary: '#f5f5f5',
-          secondary: '#a3a3a3',
-          muted: '#737373',
+          primary: '#fafafa',
+          secondary: '#a1a1aa',
+          muted: '#71717a',
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'glow-purple': 'radial-gradient(ellipse at top left, #8b5cf620 0%, transparent 60%)',
-        'glow-blue': 'radial-gradient(ellipse at bottom right, #3b82f615 0%, transparent 60%)',
+        'glow-primary': 'radial-gradient(ellipse at top left, #0ea5e918 0%, transparent 60%)',
+        'glow-secondary': 'radial-gradient(ellipse at bottom right, #38bdf812 0%, transparent 60%)',
+        'glow-purple': 'radial-gradient(ellipse at top left, #0ea5e918 0%, transparent 60%)',
+        'glow-blue': 'radial-gradient(ellipse at bottom right, #38bdf812 0%, transparent 60%)',
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',

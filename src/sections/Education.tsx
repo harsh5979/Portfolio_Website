@@ -17,17 +17,17 @@ export function Education() {
           {/* Education */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-text-primary flex items-center gap-2 mb-4">
-              <GraduationCap className="text-accent-purple" size={20} />
+              <GraduationCap className="text-accent-primary" size={20} />
               Formal Education
             </h3>
 
             {educationList.map((edu, idx) => (
               <div
                 key={idx}
-                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-purple/50 transition-colors"
+                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-primary/50 transition-colors"
               >
                 <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-purple/10 text-accent-purple border border-accent-purple/20">
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-primary/10 text-accent-primary border border-accent-primary/20">
                     CGPA: {edu.cgpa}
                   </span>
                   <span className="text-xs text-text-muted flex items-center gap-1">
@@ -58,17 +58,17 @@ export function Education() {
           {/* Leadership & Activities */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-text-primary flex items-center gap-2 mb-4">
-              <Award className="text-accent-blue" size={20} />
+              <Award className="text-accent-secondary" size={20} />
               Leadership & Honors
             </h3>
 
             {certificationsLeadership.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-blue/50 transition-colors"
+                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-secondary/50 transition-colors"
               >
                 <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-blue/10 text-accent-blue border border-accent-blue/20">
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-secondary/10 text-accent-secondary border border-accent-secondary/20">
                     {item.role}
                   </span>
                   {item.period && (

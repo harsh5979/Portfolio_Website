@@ -19,7 +19,7 @@ export function Toast({ message, visible }: ToastProps) {
           aria-live="polite"
           className="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-surface border border-border text-text-primary text-sm px-4 py-2.5 rounded-xl shadow-xl"
         >
-          <CheckCircle size={16} className="text-accent-purple shrink-0" />
+          <CheckCircle size={16} className="text-accent-primary shrink-0" />
           {message}
         </motion.div>
       )}

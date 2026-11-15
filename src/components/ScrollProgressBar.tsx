@@ -5,7 +5,7 @@ export function ScrollProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-[100] h-[2px] bg-gradient-to-r from-accent-purple to-accent-blue transition-all duration-100"
+      className="fixed top-0 left-0 z-[100] h-[2px] bg-gradient-to-r from-sky-400 to-blue-500 transition-all duration-100"
       style={{ width: `${progress}%` }}
       role="progressbar"
       aria-valuenow={Math.round(progress)}

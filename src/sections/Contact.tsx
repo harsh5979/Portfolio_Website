@@ -88,21 +88,21 @@ export function Contact() {
           {/* Contact info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3 text-text-secondary text-sm">
-              <MapPin size={18} className="text-accent-purple shrink-0" aria-hidden="true" />
+              <MapPin size={18} className="text-accent-primary shrink-0" aria-hidden="true" />
               <span>{personalInfo.location}</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail size={18} className="text-accent-purple shrink-0" aria-hidden="true" />
+              <Mail size={18} className="text-accent-primary shrink-0" aria-hidden="true" />
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-text-secondary hover:text-accent-purple text-sm transition-colors"
+                className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
               >
                 {personalInfo.email}
               </a>
               <button
                 onClick={copyEmail}
-                className="text-text-muted hover:text-accent-purple transition-colors p-1 rounded"
+                className="text-text-muted hover:text-accent-primary transition-colors p-1 rounded"
                 aria-label="Copy email address"
                 title="Copy email"
               >
@@ -111,16 +111,16 @@ export function Contact() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Phone size={18} className="text-accent-purple shrink-0" aria-hidden="true" />
+              <Phone size={18} className="text-accent-primary shrink-0" aria-hidden="true" />
               <a
                 href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-                className="text-text-secondary hover:text-accent-purple text-sm transition-colors"
+                className="text-text-secondary hover:text-accent-primary text-sm transition-colors"
               >
                 {personalInfo.phone}
               </a>
               <button
                 onClick={copyPhone}
-                className="text-text-muted hover:text-accent-purple transition-colors p-1 rounded"
+                className="text-text-muted hover:text-accent-primary transition-colors p-1 rounded"
                 aria-label="Copy phone number"
                 title="Copy phone"
               >
@@ -179,10 +179,10 @@ export function Contact() {
           {submitted ? (
             <div className="bg-surface border border-border rounded-xl p-8 flex flex-col items-center justify-center text-center gap-3">
               <div
-                className="w-12 h-12 rounded-full bg-accent-purple/10 flex items-center justify-center"
+                className="w-12 h-12 rounded-full bg-accent-primary/10 flex items-center justify-center"
                 aria-hidden="true"
               >
-                <Mail size={20} className="text-accent-purple" />
+                <Mail size={20} className="text-accent-primary" />
               </div>
               <h3 className="font-semibold text-text-primary">Message sent!</h3>
               <p className="text-sm text-text-secondary">
@@ -193,7 +193,7 @@ export function Contact() {
                   setSubmitted(false);
                   setForm({ name: '', email: '', message: '' });
                 }}
-                className="text-sm text-accent-purple hover:underline mt-2"
+                className="text-sm text-accent-primary hover:underline mt-2"
               >
                 Send another message
               </button>
@@ -223,7 +223,7 @@ export function Contact() {
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? 'name-error' : undefined}
                   placeholder="Your name"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple transition-colors duration-150"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors duration-150"
                 />
                 {errors.name && (
                   <p id="name-error" role="alert" className="text-xs text-red-400 mt-1">
@@ -250,7 +250,7 @@ export function Contact() {
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'email-error' : undefined}
                   placeholder="you@email.com"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple transition-colors duration-150"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors duration-150"
                 />
                 {errors.email && (
                   <p id="email-error" role="alert" className="text-xs text-red-400 mt-1">
@@ -276,7 +276,7 @@ export function Contact() {
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? 'message-error' : undefined}
                   placeholder="What's on your mind?"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-purple transition-colors duration-150 resize-none"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary transition-colors duration-150 resize-none"
                 />
                 {errors.message && (
                   <p id="message-error" role="alert" className="text-xs text-red-400 mt-1">
@@ -287,7 +287,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-2.5 px-4 rounded-lg bg-accent-purple text-white text-sm font-semibold hover:bg-purple-500 active:scale-95 transition-all duration-200"
+                className="w-full py-2.5 px-4 rounded-lg bg-accent-primary text-black text-sm font-semibold hover:bg-sky-400 active:scale-95 transition-all duration-200 shadow-lg shadow-sky-500/20"
               >
                 Send Message
               </button>

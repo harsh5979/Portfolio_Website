@@ -61,11 +61,11 @@ export function About() {
           {specializations.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-purple transition-colors duration-300 group"
+              className="bg-surface border border-border rounded-xl p-5 hover:border-accent-primary transition-colors duration-300 group"
             >
               <Icon
                 size={20}
-                className="text-accent-purple mb-3 group-hover:scale-110 transition-transform duration-200"
+                className="text-accent-primary mb-3 group-hover:scale-110 transition-transform duration-200"
                 aria-hidden="true"
               />
               <h3 className="text-sm font-semibold text-text-primary mb-2">{title}</h3>

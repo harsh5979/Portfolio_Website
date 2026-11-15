@@ -41,8 +41,8 @@ export function Projects() {
               aria-pressed={activeFilter === tag}
               className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition-colors duration-150 ${
                 activeFilter === tag
-                  ? 'border-accent-purple bg-accent-purple-dim text-accent-purple'
-                  : 'border-border text-text-muted hover:border-accent-purple hover:text-text-secondary'
+                  ? 'border-accent-primary bg-accent-primary-dim text-accent-primary'
+                  : 'border-border text-text-muted hover:border-accent-primary hover:text-text-secondary'
               }`}
             >
               {tag}
@@ -61,11 +61,11 @@ export function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
-                className="bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-accent-purple hover:shadow-lg hover:shadow-accent-purple/5 transition-all duration-300 group"
+                className="bg-surface border border-border rounded-xl p-6 flex flex-col gap-4 hover:border-accent-primary hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 group"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div>
-                    <h3 className="text-base font-semibold text-text-primary group-hover:text-accent-purple transition-colors duration-200">
+                    <h3 className="text-base font-semibold text-text-primary group-hover:text-accent-primary transition-colors duration-200">
                       {project.title}
                     </h3>
                     {project.period && (
@@ -87,7 +87,7 @@ export function Projects() {
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-text-muted hover:text-text-primary transition-colors duration-150"
+                        className="text-text-muted hover:text-accent-primary transition-colors duration-150"
                         aria-label={`Live demo for ${project.title} (opens in new tab)`}
                       >
                         <ExternalLink size={16} />
@@ -112,7 +112,7 @@ export function Projects() {
                 <ul className="space-y-1">
                   {project.features.slice(0, 3).map((f) => (
                     <li key={f} className="text-xs text-text-muted flex items-center gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent-purple shrink-0" aria-hidden="true" />
+                      <span className="w-1 h-1 rounded-full bg-accent-primary shrink-0" aria-hidden="true" />
                       {f}
                     </li>
                   ))}

@@ -31,7 +31,7 @@ export function Skills() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: ci * 0.05 + si * 0.03 }}
                     whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
-                    className="inline-block text-sm font-medium px-3 py-1.5 rounded-lg bg-surface border border-border text-text-secondary hover:border-accent-purple hover:text-accent-purple cursor-default transition-colors duration-150"
+                    className="inline-block text-sm font-medium px-3 py-1.5 rounded-lg bg-surface border border-border text-text-secondary hover:border-accent-primary hover:text-accent-primary cursor-default transition-colors duration-150"
                   >
                     {skill.name}
                   </motion.span>
