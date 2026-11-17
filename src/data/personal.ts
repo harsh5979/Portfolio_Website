@@ -15,8 +15,6 @@ export const personalInfo = {
   socials: {
     github: 'https://github.com/harsh5979',
     linkedin: 'https://linkedin.com/in/harsh-prajapati',
-    leetcode: 'https://leetcode.com/u/Harsh5979',
-    gfg: 'https://www.geeksforgeeks.org/user/harsh5979/',
   },
   resumeUrl: '/resume.pdf',
 };

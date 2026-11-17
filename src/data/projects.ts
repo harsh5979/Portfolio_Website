@@ -186,7 +186,7 @@ export const projects: Project[] = [
     status: 'Live Production',
     period: 'Sep 2024 – Present',
     description:
-      'A production hostel billing and student fee management platform developed for campus hostels to eliminate paper records, prevent fee defaults, and automate financial reporting.',
+      'I built E-Mess to help campus hostel staff track monthly fees, collect payments, and issue receipts.',
     features: [
       'Secure resident management, room allocation, and monthly billing cycles',
       'Razorpay payment gateway facilitating instant online fee collection with automated digital receipts',
@@ -200,9 +200,9 @@ export const projects: Project[] = [
     liveLabel: 'emessmodasa.in',
     featured: true,
     media: {
-      type: 'dashboard',
-      src: '/projects/emess.svg',
-      alt: 'E-Mess-Modasa Billing Platform Dashboard',
+      type: 'image',
+      src: '/projects/emess-live.png',
+      alt: 'E-Mess Modasa public homepage showing the campus hostel',
       aspectRatio: '16/9',
     },
     technicalDetails: {

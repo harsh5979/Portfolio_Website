@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { SectionTitle } from '../components/SectionTitle';
 import { Toast } from '../components/Toast';
-import { Copy, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Copy, MapPin, Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/BrandIcons';
 import { personalInfo } from '../data/personal';
 
@@ -149,28 +149,6 @@ export function Contact() {
               >
                 <LinkedinIcon size={16} />
                 LinkedIn
-              </a>
-              <span className="w-px h-4 bg-border" aria-hidden="true" />
-              <a
-                href={personalInfo.socials.leetcode}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
-                aria-label="LeetCode profile (opens in new tab)"
-              >
-                LeetCode
-                <ExternalLink size={12} />
-              </a>
-              <span className="w-px h-4 bg-border" aria-hidden="true" />
-              <a
-                href={personalInfo.socials.gfg}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
-                aria-label="GeeksforGeeks profile (opens in new tab)"
-              >
-                GeeksforGeeks
-                <ExternalLink size={12} />
               </a>
             </div>
           </div>

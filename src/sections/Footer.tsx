@@ -20,11 +20,6 @@ export function Footer() {
           </span>
         </div>
 
-        <div className="flex items-center gap-2 text-xs font-mono text-text-muted bg-surface px-3 py-1 rounded-full border border-border card-highlight shadow-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
-          <span>All systems operational</span>
-        </div>
-
         <div className="flex items-center gap-4">
           <a
             href={personalInfo.socials.github}
