@@ -5,9 +5,9 @@ import { useActiveSection } from '../hooks/useActiveSection';
 import { personalInfo } from '../data/personal';
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'Toolkit', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'DevOps', href: '#devops' },
@@ -34,12 +34,6 @@ export function Navbar() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  const handleNavClick = (href: string) => {
-    setMenuOpen(false);
-    const id = href.replace('#', '');
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <header
       className={`fixed top-2 left-0 right-0 z-50 flex justify-center transition-all duration-300`}
@@ -48,7 +42,7 @@ export function Navbar() {
       <nav
         className={`flex items-center justify-between w-full max-w-6xl mx-4 px-4 py-3 rounded-xl border transition-all duration-300 ${
           scrolled
-            ? 'bg-surface/90 frosted border-border shadow-xl shadow-black/20 card-highlight'
+            ? 'bg-surface/90 frosted border-border shadow-sm'
             : 'bg-transparent border-transparent'
         }`}
         aria-label="Main navigation"
@@ -56,7 +50,6 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="#hero"
-          onClick={(e) => { e.preventDefault(); handleNavClick('#hero'); }}
           className="text-sm font-bold text-text-primary hover:text-accent-primary transition-colors duration-200"
           aria-label={`${personalInfo.name} - Home`}
         >
@@ -72,13 +65,13 @@ export function Navbar() {
               <li key={href}>
                 <a
                   href={href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
+                  onClick={() => setMenuOpen(false)}
                   className={`px-3 py-1.5 text-sm rounded-md transition-colors duration-200 ${
                     isActive
                       ? 'text-accent-primary bg-accent-primary-dim font-medium'
                       : 'text-text-secondary hover:text-text-primary'
                   }`}
-                  aria-current={isActive ? 'page' : undefined}
+                  aria-current={isActive ? 'location' : undefined}
                 >
                   {label}
                 </a>
@@ -131,13 +124,13 @@ export function Navbar() {
                   <li key={href}>
                     <a
                       href={href}
-                      onClick={(e) => { e.preventDefault(); handleNavClick(href); }}
+                      onClick={() => setMenuOpen(false)}
                       className={`block px-4 py-2.5 text-sm rounded-lg transition-colors duration-200 ${
                         isActive
                           ? 'text-accent-primary bg-accent-primary-dim font-medium'
                           : 'text-text-secondary hover:text-text-primary hover:bg-surface-2'
                       }`}
-                      aria-current={isActive ? 'page' : undefined}
+                      aria-current={isActive ? 'location' : undefined}
                     >
                       {label}
                     </a>

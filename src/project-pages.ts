@@ -5,6 +5,12 @@ const site = 'https://harshprajapati.dev';
 export const visibleProjects = projects.filter(({ availability }) => availability !== 'offline');
 export const projectPath = (project: Project) => `/projects/${encodeURIComponent(project.id)}/`;
 
+export function projectSource(project: Project) {
+  if (project.repoStatus !== 'public' || !project.githubUrl) return undefined;
+  const path = new URL(project.githubUrl).pathname;
+  if (path.split('/').filter(Boolean).length > 1) return project.githubUrl;
+}
+
 function escape(value: string) {
   return value.replace(/[&<>"']/g, (character) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -24,7 +30,7 @@ export function projectPage(project: Project, stylesheet: string) {
       <p class="mt-2 leading-relaxed text-text-secondary">${escape(content)}</p>
     </section>`;
   const live = project.liveUrl && project.liveUrl !== '#' ? project.liveUrl : '';
-  const source = project.repoStatus === 'public' && project.githubUrl && new URL(project.githubUrl).pathname.split('/').filter(Boolean).length > 1 ? project.githubUrl : '';
+  const source = projectSource(project);
 
   return `<!doctype html>
 <html lang="en">
@@ -48,17 +54,20 @@ export function projectPage(project: Project, stylesheet: string) {
 </head>
 <body>
   <header class="border-b border-border">
-    <nav aria-label="Portfolio" class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-5 text-sm">
+    <nav aria-label="Portfolio" class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-4 text-sm">
       <a href="/" class="font-bold">Harsh Prajapati</a>
       <a href="/#projects" class="font-semibold text-accent-primary underline underline-offset-4">Back to projects</a>
     </nav>
   </header>
-  <main class="mx-auto max-w-6xl px-5 py-8 md:py-12">
+  <main class="mx-auto max-w-6xl px-5 py-6 md:py-9">
     <article class="space-y-8">
       <div class="case-study-intro ${project.media ? 'case-study-intro-with-media' : ''}">
       <header class="max-w-3xl">
         <p class="text-sm text-text-muted">${escape(project.category || 'Engineering project')} · ${escape(project.period)}</p>
-        <h1 class="portfolio-display mt-3 text-4xl leading-none lg:text-6xl">${title}</h1>
+        <div class="mt-3 flex flex-wrap items-center gap-3">
+          ${project.icon ? `<img class="size-10 rounded-md border border-border bg-surface p-1 object-contain" src="${escape(project.icon)}" width="40" height="40" alt="">` : ''}
+          <h1 class="portfolio-display text-4xl leading-none lg:text-6xl">${title}</h1>
+        </div>
         <p class="mt-4 text-lg leading-relaxed text-text-secondary">${description}</p>
         ${live || source ? `<div class="mt-5 flex flex-wrap gap-5 text-sm font-semibold text-accent-primary">
           ${live ? `<a class="underline underline-offset-4" href="${escape(live)}">Visit live site</a>` : ''}

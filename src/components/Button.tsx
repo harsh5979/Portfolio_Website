@@ -19,7 +19,7 @@ export function Button({
 
   const variants = {
     primary:
-      'bg-accent-primary text-black font-semibold hover:bg-sky-400 active:scale-95 shadow-md shadow-sky-500/15',
+      'bg-accent-primary text-white font-semibold hover:bg-accent-primary-hover active:scale-95',
     secondary:
       'border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary active:scale-95 bg-transparent',
     ghost:

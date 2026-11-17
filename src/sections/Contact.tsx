@@ -46,11 +46,15 @@ export function Contact() {
   }, []);
 
   const copyEmail = useCallback(() => {
-    navigator.clipboard.writeText(personalInfo.email).then(() => showToast('Email copied to clipboard'));
+    navigator.clipboard.writeText(personalInfo.email)
+      .then(() => showToast('Email copied'))
+      .catch(() => showToast('Could not copy. Select the email address to copy it.'));
   }, [showToast]);
 
   const copyPhone = useCallback(() => {
-    navigator.clipboard.writeText(personalInfo.phone).then(() => showToast('Phone number copied to clipboard'));
+    navigator.clipboard.writeText(personalInfo.phone)
+      .then(() => showToast('Phone number copied'))
+      .catch(() => showToast('Could not copy. Select the phone number to copy it.'));
   }, [showToast]);
 
   const handleChange = (
@@ -70,18 +74,19 @@ export function Contact() {
       setErrors(errs);
       return;
     }
-    // UI-only demo — no real backend required for static portfolio
+    const subject = encodeURIComponent(`Portfolio message from ${form.name}`);
+    const body = encodeURIComponent(`${form.message}\n\nReply to ${form.email}`);
+    window.location.href = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
     setSubmitted(true);
-    showToast("Message sent! I'll get back to you soon.");
   };
 
   return (
-    <AnimatedSection id="contact" className="py-24 md:py-32 scroll-mt-24">
+    <AnimatedSection id="contact" className="py-16 md:py-20 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionTitle
           label="Contact"
           title="Get in touch"
-          subtitle="Looking for an engineer who builds resilient systems from code to cloud? Reach out directly."
+          subtitle="Email me about a role, a project, or a question about my work."
         />
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -155,25 +160,21 @@ export function Contact() {
 
           {/* Contact form */}
           {submitted ? (
-            <div className="bg-surface border border-border rounded-xl p-8 flex flex-col items-center justify-center text-center gap-3 card-highlight">
+            <div className="bg-surface border border-border rounded-xl p-8 flex flex-col items-center justify-center text-center gap-3">
               <div
                 className="w-12 h-12 rounded-full bg-accent-primary/10 border border-accent-primary/20 flex items-center justify-center"
                 aria-hidden="true"
               >
                 <Mail size={20} className="text-accent-primary" />
               </div>
-              <h3 className="font-semibold text-text-primary">Message sent!</h3>
-              <p className="text-sm text-text-secondary">
-                Thanks for reaching out. I'll get back to you as soon as I can.
-              </p>
+              <h3 className="font-semibold text-text-primary">Email draft prepared</h3>
+              <p className="text-sm text-text-secondary">Send the draft from your email app. If it did not open, use the email link on this page.</p>
               <button
-                onClick={() => {
-                  setSubmitted(false);
-                  setForm({ name: '', email: '', message: '' });
-                }}
+                type="button"
+                onClick={() => setSubmitted(false)}
                 className="text-sm text-accent-primary hover:underline mt-2 cursor-pointer"
               >
-                Send another message
+                Edit message
               </button>
             </div>
           ) : (
@@ -201,10 +202,10 @@ export function Contact() {
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? 'name-error' : undefined}
                   placeholder="Your name"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 card-highlight transition-all duration-150"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 transition-all duration-150"
                 />
                 {errors.name && (
-                  <p id="name-error" role="alert" className="text-xs text-red-400 mt-1">
+                  <p id="name-error" role="alert" className="text-xs text-red-700 mt-1">
                     {errors.name}
                   </p>
                 )}
@@ -228,10 +229,10 @@ export function Contact() {
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? 'email-error' : undefined}
                   placeholder="you@email.com"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 card-highlight transition-all duration-150"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 transition-all duration-150"
                 />
                 {errors.email && (
-                  <p id="email-error" role="alert" className="text-xs text-red-400 mt-1">
+                  <p id="email-error" role="alert" className="text-xs text-red-700 mt-1">
                     {errors.email}
                   </p>
                 )}
@@ -254,10 +255,10 @@ export function Contact() {
                   aria-invalid={!!errors.message}
                   aria-describedby={errors.message ? 'message-error' : undefined}
                   placeholder="What's on your mind?"
-                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 card-highlight transition-all duration-150 resize-none"
+                  className="w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent-primary focus:ring-1 focus:ring-accent-primary/40 transition-all duration-150 resize-none"
                 />
                 {errors.message && (
-                  <p id="message-error" role="alert" className="text-xs text-red-400 mt-1">
+                  <p id="message-error" role="alert" className="text-xs text-red-700 mt-1">
                     {errors.message}
                   </p>
                 )}
@@ -265,9 +266,9 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-2.5 px-4 rounded-lg bg-accent-primary text-black text-sm font-semibold hover:bg-sky-400 active:scale-95 transition-all duration-200 shadow-lg shadow-sky-500/20 card-highlight cursor-pointer"
+                className="w-full py-2.5 px-4 rounded-lg bg-accent-primary text-white text-sm font-semibold hover:bg-accent-primary-hover active:scale-95 transition-all duration-200 cursor-pointer"
               >
-                Send Message
+                Open email draft
               </button>
             </form>
           )}
