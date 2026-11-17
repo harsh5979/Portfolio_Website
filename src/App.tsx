@@ -7,7 +7,7 @@ import { Hero } from './sections/Hero';
 
 const About = lazy(() => import('./sections/About').then((m) => ({ default: m.About })));
 const Skills = lazy(() => import('./sections/Skills').then((m) => ({ default: m.Skills })));
-const Projects = lazy(() => import('./sections/Projects').then((m) => ({ default: m.Projects })));
+import { Projects } from './sections/Projects';
 const Experience = lazy(() => import('./sections/Experience').then((m) => ({ default: m.Experience })));
 const Education = lazy(() => import('./sections/Education').then((m) => ({ default: m.Education })));
 const DevOps = lazy(() => import('./sections/DevOps').then((m) => ({ default: m.DevOps })));
@@ -39,14 +39,12 @@ function App() {
       <Navbar />
       <main id="main-content" tabIndex={-1}>
         <Hero />
+        <Projects />
         <Suspense fallback={<SectionSkeleton minHeight="min-h-[600px]" />}>
           <About />
         </Suspense>
         <Suspense fallback={<SectionSkeleton minHeight="min-h-[500px]" />}>
           <Skills />
-        </Suspense>
-        <Suspense fallback={<SectionSkeleton minHeight="min-h-[800px]" />}>
-          <Projects />
         </Suspense>
         <Suspense fallback={<SectionSkeleton minHeight="min-h-[600px]" />}>
           <Experience />

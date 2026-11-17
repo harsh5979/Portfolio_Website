@@ -11,32 +11,32 @@ export default {
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       colors: {
-        background: '#09090b',
-        surface: '#121215',
-        'surface-2': '#18181b',
-        border: '#27272a',
+        background: '#f5f3ed',
+        surface: '#fffdf8',
+        'surface-2': '#eaece2',
+        border: '#cfd5c9',
         accent: {
-          primary: '#0ea5e9',       // Clean, high-tech electric sky blue
-          'primary-hover': '#0284c7',
-          'primary-dim': '#0ea5e918',
-          secondary: '#38bdf8',     // Crisp ice blue
-          'secondary-dim': '#38bdf818',
+          primary: '#327957',       // Clean, high-tech electric sky blue
+          'primary-hover': '#286146',
+          'primary-dim': '#32795718',
+          secondary: '#53866d',     // Crisp ice blue
+          'secondary-dim': '#53866d18',
           cyan: '#06b6d4',
           blue: '#3b82f6',
           emerald: '#10b981',       // Clean emerald status accent
           'emerald-dim': '#10b98118',
         },
         text: {
-          primary: '#fafafa',
-          secondary: '#a1a1aa',
-          muted: '#71717a',
+          primary: '#202b26',
+          secondary: '#42564b',
+          muted: '#52645a',
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'glow-primary': 'radial-gradient(ellipse at top left, #0ea5e918 0%, transparent 60%)',
-        'glow-secondary': 'radial-gradient(ellipse at bottom right, #38bdf812 0%, transparent 60%)',
-        'glow-blue': 'radial-gradient(ellipse at bottom right, #38bdf812 0%, transparent 60%)',
+        'glow-primary': 'radial-gradient(ellipse at top left, #32795718 0%, transparent 60%)',
+        'glow-secondary': 'radial-gradient(ellipse at bottom right, #53866d12 0%, transparent 60%)',
+        'glow-blue': 'radial-gradient(ellipse at bottom right, #53866d12 0%, transparent 60%)',
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',

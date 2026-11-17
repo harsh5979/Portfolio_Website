@@ -21,12 +21,7 @@ export const projects: Project[] = [
     liveUrl: 'https://northsoulclothing.site',
     liveLabel: 'northsoulclothing.site',
     featured: true,
-    media: {
-      type: 'dashboard',
-      src: '/projects/northsoul.svg',
-      alt: 'NorthSoul Clothing E-Commerce Platform Preview',
-      aspectRatio: '16/9',
-    },
+    media: { type: 'image', src: '/projects/northsoul-live.png', alt: 'NorthSoul Clothing storefront homepage' },
     technicalDetails: {
       problem:
         'Direct-to-consumer apparel platforms frequently encounter cart drop-offs during network intermittency, inventory race conditions during peak traffic drops, and payment confirmation webhook mismatches.',
@@ -409,6 +404,8 @@ export const projects: Project[] = [
     features: ["Per-call conversation context", "Dedicated voice runtime", "Carrier playback acknowledgements"],
     stack: ["FastAPI", "React", "Redis", "Plivo", "Sarvam", "Silero VAD"],
     featured: true,
+    liveUrl: 'https://diwali.northsoulclothing.site',
+    media: { type: 'image', src: '/projects/diwali-live.png', alt: 'Vatchit public homepage with a voice call preview' },
     technicalDetails: {
       problem: "Turn outbound scripts into interactive calls that handle interruptions.",
       solution: "Reserve capacity before dialing and allow the recipient to interrupt playback.",
@@ -457,6 +454,8 @@ export const projects: Project[] = [
     features: ["PNG and SVG conversion", "PDF and DOCX tools", "Local file processing"],
     stack: ["Next.js", "TypeScript", "Canvas", "PDF"],
     featured: false,
+    liveUrl: 'https://tools.northsoulclothing.site',
+    media: { type: 'image', src: '/projects/tools-live.png', alt: 'Document Studio homepage showing browser-based conversion tools' },
     technicalDetails: {
       problem: "Convert everyday files without uploading them.",
       solution: "Share conversion and preview logic across tool pages.",
