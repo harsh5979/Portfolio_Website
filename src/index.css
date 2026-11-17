@@ -185,3 +185,40 @@
     transition-duration: .01ms !important;
   }
 }
+
+/* Vary the section surfaces while keeping the original portfolio palette. */
+#skills, #devops {
+  background-color: #eaece2;
+  border-block: 1px solid #cfd5c9;
+}
+
+#experience {
+  background: linear-gradient(135deg, #f2f2e9, #e5eee4);
+}
+
+#contact {
+  background: linear-gradient(150deg, #f5f3ed 25%, #dfece0);
+}
+
+.hero-field-contours {
+  inset: -3rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .case-study-media {
+    animation: case-preview-settle 780ms cubic-bezier(.18, .78, .24, 1.12);
+  }
+  .case-study-details[open] ul {
+    animation: notes-enter 260ms ease-out both;
+  }
+}
+
+@keyframes case-preview-settle {
+  from { transform: translateY(18px) scale(.975); }
+  to { transform: translateY(0) scale(1); }
+}
+
+@keyframes notes-enter {
+  from { transform: translateY(-6px); opacity: .55; }
+  to { transform: translateY(0); opacity: 1; }
+}

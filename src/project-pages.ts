@@ -71,10 +71,10 @@ export function projectPage(project: Project, stylesheet: string) {
         </nav>
       </header>
       ${project.media ? `<figure>
-        <div class="case-study-media overflow-hidden rounded-lg border border-border">
+        <a class="case-study-media block overflow-hidden rounded-lg border border-border" href="${escape(project.media.src)}" aria-label="Open full-size project preview">
           <img src="${escape(project.media.src)}" alt="${escape(project.media.alt)}" decoding="async">
-        </div>
-        <figcaption class="mt-2 text-sm text-text-muted">${project.media.type === 'image' ? 'Public website screenshot' : 'Project illustration'}</figcaption>
+        </a>
+        <figcaption class="mt-2 text-sm text-text-muted">${project.media.type === 'image' ? 'Public website screenshot' : 'Project illustration'} <a class="ml-2 underline underline-offset-4" href="${escape(project.media.src)}">Open full size</a></figcaption>
       </figure>` : ''}
       </div>
       <div id="implementation" class="grid scroll-mt-5 gap-8 md:grid-cols-[2fr_1fr]">
