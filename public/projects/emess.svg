@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="emess-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1319"/>
+      <stop offset="50%" stop-color="#101e28"/>
+      <stop offset="100%" stop-color="#142633"/>
+    </linearGradient>
+    <linearGradient id="emess-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#162734"/>
+      <stop offset="100%" stop-color="#0f1b25"/>
+    </linearGradient>
+    <pattern id="emess-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1d3748" stroke-width="0.75" stroke-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#emess-bg)"/>
+  <rect width="1200" height="675" fill="url(#emess-grid)"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="40" y="30" width="1120" height="60" rx="10" fill="#0f1b25" stroke="#1d3748" stroke-width="1.5"/>
+  <circle cx="70" cy="60" r="6" fill="#ef4444"/>
+  <circle cx="92" cy="60" r="6" fill="#f59e0b"/>
+  <circle cx="114" cy="60" r="6" fill="#10b981"/>
+  <text x="145" y="65" fill="#7dd3fc" font-family="monospace" font-size="14" font-weight="600">emessmodasa.in // HOSTEL BILLING &amp; STUDENT EXPENSE SAAS</text>
+  <rect x="940" y="45" width="200" height="30" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+  <text x="965" y="65" fill="#34d399" font-family="monospace" font-size="12" font-weight="700">● LIVE PRODUCTION</text>
+
+  <!-- KPI Metrics Banner -->
+  <g transform="translate(40, 110)">
+    <g transform="translate(0, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">TOTAL COLLECTIONS (FY 24-25)</text>
+      <text x="25" y="75" fill="#38bdf8" font-family="monospace" font-size="28" font-weight="700">₹14,80,000</text>
+    </g>
+
+    <g transform="translate(285, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">REGISTERED RESIDENTS</text>
+      <text x="25" y="75" fill="#34d399" font-family="monospace" font-size="28" font-weight="700">420+ Active</text>
+    </g>
+
+    <g transform="translate(570, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">BOOKKEEPING EFFORT</text>
+      <text x="25" y="75" fill="#a78bfa" font-family="monospace" font-size="28" font-weight="700">-80% Saved</text>
+    </g>
+
+    <g transform="translate(855, 0)">
+      <rect width="265" height="100" rx="10" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">GATEWAY RECONCILIATION</text>
+      <text x="25" y="75" fill="#f59e0b" font-family="monospace" font-size="28" font-weight="700">Razorpay Auto</text>
+    </g>
+  </g>
+
+  <!-- Left Side: Interactive Fee Ledger & Billing Records -->
+  <g transform="translate(40, 230)">
+    <rect width="660" height="405" rx="12" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Monthly Hostel Fee Reconciliation Table</text>
+    <text x="30" y="65" fill="#64748b" font-family="monospace" font-size="12">Real-time ledger entries with instant receipt hashing</text>
+
+    <!-- Table Header -->
+    <rect x="30" y="85" width="600" height="35" rx="6" fill="#0c1720"/>
+    <text x="45" y="108" fill="#94a3b8" font-family="monospace" font-size="11">STUDENT NAME</text>
+    <text x="210" y="108" fill="#94a3b8" font-family="monospace" font-size="11">ROOM / BLOCK</text>
+    <text x="340" y="108" fill="#94a3b8" font-family="monospace" font-size="11">AMOUNT</text>
+    <text x="440" y="108" fill="#94a3b8" font-family="monospace" font-size="11">STATUS</text>
+    <text x="545" y="108" fill="#94a3b8" font-family="monospace" font-size="11">ACTION</text>
+
+    <!-- Row 1 -->
+    <g transform="translate(30, 130)">
+      <rect width="600" height="45" rx="6" fill="#0f1f2c"/>
+      <text x="15" y="28" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Rohit Patel</text>
+      <text x="180" y="28" fill="#94a3b8" font-family="monospace" font-size="12">B-304 (Double)</text>
+      <text x="310" y="28" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="600">₹3,500</text>
+      <rect x="410" y="12" width="75" height="22" rx="4" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+      <text x="424" y="27" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">PAID</text>
+      <text x="515" y="28" fill="#0ea5e9" font-family="monospace" font-size="11">Receipt ↗</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(30, 185)">
+      <rect width="600" height="45" rx="6" fill="#0d1b26"/>
+      <text x="15" y="28" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Aman Sharma</text>
+      <text x="180" y="28" fill="#94a3b8" font-family="monospace" font-size="12">A-112 (Single)</text>
+      <text x="310" y="28" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="600">₹4,200</text>
+      <rect x="410" y="12" width="75" height="22" rx="4" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+      <text x="424" y="27" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">PAID</text>
+      <text x="515" y="28" fill="#0ea5e9" font-family="monospace" font-size="11">Receipt ↗</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(30, 240)">
+      <rect width="600" height="45" rx="6" fill="#0f1f2c"/>
+      <text x="15" y="28" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Karan Desai</text>
+      <text x="180" y="28" fill="#94a3b8" font-family="monospace" font-size="12">C-208 (Triple)</text>
+      <text x="310" y="28" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="600">₹3,000</text>
+      <rect x="410" y="12" width="75" height="22" rx="4" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+      <text x="420" y="27" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="700">PENDING</text>
+      <text x="515" y="28" fill="#f59e0b" font-family="monospace" font-size="11">Remind ⚡</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(30, 295)">
+      <rect width="600" height="45" rx="6" fill="#0d1b26"/>
+      <text x="15" y="28" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Vikas Joshi</text>
+      <text x="180" y="28" fill="#94a3b8" font-family="monospace" font-size="12">B-105 (Double)</text>
+      <text x="310" y="28" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="600">₹3,500</text>
+      <rect x="410" y="12" width="75" height="22" rx="4" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1"/>
+      <text x="424" y="27" fill="#34d399" font-family="monospace" font-size="10" font-weight="700">PAID</text>
+      <text x="515" y="28" fill="#0ea5e9" font-family="monospace" font-size="11">Receipt ↗</text>
+    </g>
+
+    <!-- Bottom summary status -->
+    <text x="35" y="375" fill="#34d399" font-family="monospace" font-size="12">✓ 96.4% on-time monthly payment rate achieved</text>
+  </g>
+
+  <!-- Right Side: Revenue Analytics Chart & Razorpay Integration -->
+  <g transform="translate(730, 230)">
+    <rect width="430" height="405" rx="12" fill="url(#emess-card)" stroke="#1d3748" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Monthly Revenue Influx</text>
+    <text x="30" y="65" fill="#64748b" font-family="monospace" font-size="12">Automated reconciliation via webhook events</text>
+
+    <!-- Chart Bars -->
+    <g transform="translate(40, 95)">
+      <line x1="0" y1="180" x2="350" y2="180" stroke="#1d3748" stroke-width="1"/>
+      <line x1="0" y1="120" x2="350" y2="120" stroke="#1d3748" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="0" y1="60" x2="350" y2="60" stroke="#1d3748" stroke-width="1" stroke-dasharray="3,3"/>
+
+      <!-- Bar 1 -->
+      <rect x="30" y="70" width="35" height="110" rx="4" fill="#0284c7"/>
+      <text x="35" y="200" fill="#94a3b8" font-family="monospace" font-size="11">NOV</text>
+
+      <!-- Bar 2 -->
+      <rect x="95" y="55" width="35" height="125" rx="4" fill="#0284c7"/>
+      <text x="100" y="200" fill="#94a3b8" font-family="monospace" font-size="11">DEC</text>
+
+      <!-- Bar 3 -->
+      <rect x="160" y="40" width="35" height="140" rx="4" fill="#0ea5e9"/>
+      <text x="165" y="200" fill="#94a3b8" font-family="monospace" font-size="11">JAN</text>
+
+      <!-- Bar 4 -->
+      <rect x="225" y="30" width="35" height="150" rx="4" fill="#38bdf8"/>
+      <text x="230" y="200" fill="#94a3b8" font-family="monospace" font-size="11">FEB</text>
+
+      <!-- Bar 5 -->
+      <rect x="290" y="15" width="35" height="165" rx="4" fill="#10b981"/>
+      <text x="295" y="200" fill="#34d399" font-family="monospace" font-size="11">MAR</text>
+    </g>
+
+    <!-- Integration Callout -->
+    <g transform="translate(30, 315)">
+      <rect width="370" height="65" rx="8" fill="#0a151d" stroke="#1d3748" stroke-width="1"/>
+      <text x="15" y="25" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="13" font-weight="600">Razorpay Direct Settlement</text>
+      <text x="15" y="48" fill="#64748b" font-family="monospace" font-size="11">T+1 automated settlement with zero ledger discrepancy</text>
+    </g>
+  </g>
+</svg>

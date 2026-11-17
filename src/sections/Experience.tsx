@@ -5,7 +5,7 @@ import { experiences } from '../data/experience';
 
 export function Experience() {
   return (
-    <AnimatedSection id="experience" className="py-24 md:py-32 bg-surface/30">
+    <AnimatedSection id="experience" className="py-24 md:py-32 scroll-mt-24 bg-surface/30">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionTitle
           label="Experience"
@@ -21,11 +21,11 @@ export function Experience() {
             >
               {/* Timeline marker */}
               <div
-                className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent-primary border-2 border-background ring-4 ring-background"
+                className="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-accent-primary border-2 border-background ring-4 ring-background shadow-glow-subtle"
                 aria-hidden="true"
               />
 
-              <div className="bg-surface/80 border border-border rounded-xl p-6 sm:p-8 hover:border-accent-primary/60 transition-all duration-300">
+              <div className="bg-surface border border-border rounded-xl p-6 sm:p-8 hover:border-accent-primary/60 hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 card-highlight">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                   <div>
                     <div className="flex items-center gap-2 mb-1">

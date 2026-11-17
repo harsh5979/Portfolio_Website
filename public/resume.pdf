@@ -1,0 +1,310 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page
+   /Parent 2 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 4 0 R
+   /Resources <<
+     /Font <<
+       /F1 5 0 R
+       /F2 6 0 R
+       /F3 7 0 R
+     >>
+   >>
+>>
+endobj
+4 0 obj
+<< /Length 6136 >>
+stream
+0.055 0.647 0.914 rg
+40.0 808.0 515.0 4.0 re f
+BT
+/F2 20 Tf
+0.071 0.094 0.149 rg
+40 786 Td
+(HARSH PRAJAPATI) Tj
+ET
+BT
+/F2 10 Tf
+0.055 0.647 0.914 rg
+40 772 Td
+(Full Stack Developer  |  Backend Engineer  |  DevOps & Cloud) Tj
+ET
+BT
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+40 758 Td
+(Ahmedabad, India  |  harshprajapati0018@gmail.com  |  +91 6351068313  |  harshprajapati.dev  |  github.com/harsh5979) Tj
+ET
+0.898 0.906 0.922 RG
+1.00 w 40.0 748.0 m 555.0 748.0 l S
+BT
+/F2 11 Tf
+0.055 0.647 0.914 rg
+40 730.0 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+0.055 0.647 0.914 RG
+0.75 w 40.0 727.0 m 555.0 727.0 l S
+BT
+/F1 9 Tf
+0.216 0.255 0.318 rg
+40 715.0 Td
+(Full Stack & Backend Developer with hands-on expertise in distributed systems, automated deployment) Tj
+0 -12 Td (pipelines, cloud infrastructure \(AWS/Docker/Nginx\), and AI-driven platforms. Currently engineering core) Tj
+0 -12 Td (hiring automation, real-time voice screening, and RAG evaluation pipelines at The Special Character \(haira.ai\).) Tj
+ET
+BT
+/F2 11 Tf
+0.055 0.647 0.914 rg
+40 668.0 Td
+(TECHNICAL SKILLS) Tj
+ET
+0.055 0.647 0.914 RG
+0.75 w 40.0 665.0 m 555.0 665.0 l S
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 653.0 Td
+(Languages:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (TypeScript, JavaScript, Python, Java, C++, SQL, Bash) Tj
+ET
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 640.0 Td
+(Frontend & UI:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (React.js, Next.js, Tailwind CSS, Framer Motion, HTML5, CSS3, Responsive Design) Tj
+ET
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 627.0 Td
+(Backend & APIs:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (Node.js, Express.js, Fastify, Flask, REST APIs, GraphQL, WebSockets, WebRTC, OAuth) Tj
+ET
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 614.0 Td
+(DevOps & Cloud:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (Docker, Docker Compose, Kubernetes, AWS \(EC2, S3\), Linux/Ubuntu, Nginx, CI/CD \(GitHub Actions\)) Tj
+ET
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 601.0 Td
+(Databases:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (MongoDB, PostgreSQL, MySQL, Redis, Mongoose, Prisma) Tj
+ET
+BT
+/F2 8.5 Tf
+0.122 0.161 0.216 rg
+40 588.0 Td
+(AI & Integration:) Tj
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+ 85 0 Td (LLM Integration, RAG Architectures, Speech-to-Text, Razorpay, PhonePe, Postman, Git) Tj
+ET
+BT
+/F2 11 Tf
+0.055 0.647 0.914 rg
+40 566.0 Td
+(WORK EXPERIENCE) Tj
+ET
+0.055 0.647 0.914 RG
+0.75 w 40.0 563.0 m 555.0 563.0 l S
+BT
+/F2 10 Tf
+0.067 0.094 0.153 rg
+40 551.0 Td
+(Software Developer  --  The Special Character \(haira.ai\)) Tj
+/F1 8.5 Tf
+0.420 0.447 0.502 rg
+ 330 0 Td (Jun 2025 - Present | Ahmedabad, IN) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 538.0 Td
+(-  Engineered core modules for haira.ai, an AI recruitment platform automating candidate workflows from job creation to scoring.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 526.0 Td
+(-  Built AI resume ranking and multi-section scoring pipelines evaluating applicants against job requirements with evidence-based reasoning.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 514.0 Td
+(-  Implemented AI phone screening & browser video interview systems featuring real-time voice interaction, transcripts, and assessment.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 502.0 Td
+(-  Optimized low-latency audio processing pipelines with connection pooling, speech-to-text fallbacks, and VAD cutoff controls.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 490.0 Td
+(-  Technologies: Node.js, Next.js, TypeScript, Python, LLM / RAG, WebRTC, MongoDB, Docker, AWS) Tj
+ET
+BT
+/F2 10 Tf
+0.067 0.094 0.153 rg
+40 474.0 Td
+(Product Developer & Maintainer  --  E-Mess-Modasa) Tj
+/F1 8.5 Tf
+0.420 0.447 0.502 rg
+ 330 0 Td (Sep 2024 - Present | Modasa, IN) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 461.0 Td
+(-  Architected and deployed production hostel mess billing & resident management platform serving campus students and staff.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 449.0 Td
+(-  Integrated Razorpay payment gateway facilitating instant, secure online dues settlement with automatic invoice generation.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 437.0 Td
+(-  Built administrative reporting dashboard for financial metrics and dues tracking, reducing staff administrative overhead by 80%.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 425.0 Td
+(-  Technologies: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Razorpay, Nginx, Linux) Tj
+ET
+BT
+/F2 11 Tf
+0.055 0.647 0.914 rg
+40 404.0 Td
+(KEY ENGINEERING PROJECTS) Tj
+ET
+0.055 0.647 0.914 RG
+0.75 w 40.0 401.0 m 555.0 401.0 l S
+BT
+/F2 9.5 Tf
+0.067 0.094 0.153 rg
+40 389.0 Td
+(AutoDeployment -- Automated MERN Container Deployment Engine) Tj
+ET
+BT
+/F3 8 Tf
+0.055 0.647 0.914 rg
+40 378.0 Td
+(Stack: Node.js, Docker, Nginx, GitHub Actions, AWS) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 367.0 Td
+(-  Self-hosted deployment system automating git webhook ingestion, isolated containerized builds, and reverse proxy routing.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 356.0 Td
+(-  Automated SSL generation via Certbot and dynamic subdomain provisioning for production applications.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.067 0.094 0.153 rg
+40 342.0 Td
+(NorthSoul Clothing -- Full Stack E-Commerce Engine) Tj
+ET
+BT
+/F3 8 Tf
+0.055 0.647 0.914 rg
+40 331.0 Td
+(Stack: Next.js, Node.js, MedusaJS, PhonePe, Tailwind CSS) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 320.0 Td
+(-  Engineered modern responsive storefront featuring server-side rendering, catalog indexing, and session management.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.216 0.255 0.318 rg
+50 309.0 Td
+(-  Integrated PhonePe payment gateway, OAuth login, and webhook validation ensuring transactional integrity.) Tj
+ET
+BT
+/F2 11 Tf
+0.055 0.647 0.914 rg
+40 290.0 Td
+(EDUCATION & CREDENTIALS) Tj
+ET
+0.055 0.647 0.914 RG
+0.75 w 40.0 287.0 m 555.0 287.0 l S
+BT
+/F2 9.5 Tf
+0.067 0.094 0.153 rg
+40 275.0 Td
+(B.Tech in Computer Engineering  --  Government Engineering College, Modasa \(GTU\)) Tj
+/F1 8.5 Tf
+0.420 0.447 0.502 rg
+ 330 0 Td (2022 - 2026 | CGPA: 7.30 / 10.0) Tj
+ET
+BT
+/F1 8.5 Tf
+0.294 0.333 0.388 rg
+40 262.0 Td
+(Google Developer Student Club \(GDSC\) Core Member  |  State-Level Hackathon Finalist  |  Lakshya Techfest Certified) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000319 00000 n 
+0000006507 00000 n 
+0000006604 00000 n 
+0000006706 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+6811
+%%EOF

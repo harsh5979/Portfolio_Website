@@ -1,3 +1,18 @@
+export interface ProjectMedia {
+  type: 'image' | 'architecture' | 'dashboard';
+  src: string;
+  alt: string;
+  aspectRatio?: string;
+}
+
+export interface ProjectTechnicalDetails {
+  problem: string;
+  solution: string;
+  architecture: string;
+  highlights: string[];
+  metrics?: { label: string; value: string }[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -7,10 +22,13 @@ export interface Project {
   description: string;
   features: string[];
   stack: string[];
-  githubUrl: string;
-  liveUrl: string;
+  githubUrl?: string;
+  repoStatus?: 'public' | 'private' | 'architecture';
+  liveUrl?: string;
   liveLabel?: string;
   featured: boolean;
+  media?: ProjectMedia;
+  technicalDetails?: ProjectTechnicalDetails;
 }
 
 export interface SkillCategory {

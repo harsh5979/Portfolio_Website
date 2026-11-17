@@ -5,8 +5,11 @@ export function ScrollProgressBar() {
 
   return (
     <div
-      className="fixed top-0 left-0 z-[100] h-[2px] bg-gradient-to-r from-sky-400 to-blue-500 transition-all duration-100"
-      style={{ width: `${progress}%` }}
+      className="fixed top-0 left-0 right-0 z-[100] h-[2px] bg-gradient-to-r from-sky-400 via-sky-300 to-blue-500 will-change-transform"
+      style={{
+        transform: `scaleX(${progress / 100})`,
+        transformOrigin: '0%',
+      }}
       role="progressbar"
       aria-valuenow={Math.round(progress)}
       aria-valuemin={0}

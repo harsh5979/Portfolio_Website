@@ -48,7 +48,7 @@ export function Navbar() {
       <nav
         className={`flex items-center justify-between w-full max-w-6xl mx-4 px-4 py-3 rounded-xl border transition-all duration-300 ${
           scrolled
-            ? 'bg-surface/90 frosted border-border shadow-xl shadow-black/20'
+            ? 'bg-surface/90 frosted border-border shadow-xl shadow-black/20 card-highlight'
             : 'bg-transparent border-transparent'
         }`}
         aria-label="Main navigation"
@@ -91,7 +91,7 @@ export function Navbar() {
         <a
           href={personalInfo.resumeUrl}
           download
-          className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary transition-colors duration-200"
+          className="hidden md:inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border border-border text-text-primary hover:border-accent-primary hover:text-accent-primary hover:shadow-glow-subtle transition-all duration-200 card-highlight"
           aria-label="Download resume"
         >
           <Download size={14} />

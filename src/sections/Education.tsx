@@ -5,7 +5,7 @@ import { educationList, certificationsLeadership } from '../data/education';
 
 export function Education() {
   return (
-    <AnimatedSection id="education" className="py-24 md:py-32">
+    <AnimatedSection id="education" className="py-24 md:py-32 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionTitle
           label="Background"
@@ -24,7 +24,7 @@ export function Education() {
             {educationList.map((edu, idx) => (
               <div
                 key={idx}
-                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-primary/50 transition-colors"
+                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-primary/50 hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 card-highlight"
               >
                 <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
                   <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-primary/10 text-accent-primary border border-accent-primary/20">
@@ -65,7 +65,7 @@ export function Education() {
             {certificationsLeadership.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-secondary/50 transition-colors"
+                className="bg-surface border border-border rounded-xl p-6 hover:border-accent-secondary/50 hover:shadow-lg hover:shadow-sky-500/5 transition-all duration-300 card-highlight"
               >
                 <div className="flex items-center justify-between gap-2 flex-wrap mb-1">
                   <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-accent-secondary/10 text-accent-secondary border border-accent-secondary/20">

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="event-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120e17"/>
+      <stop offset="50%" stop-color="#1c1424"/>
+      <stop offset="100%" stop-color="#241a30"/>
+    </linearGradient>
+    <linearGradient id="event-card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22192d"/>
+      <stop offset="100%" stop-color="#17111f"/>
+    </linearGradient>
+    <pattern id="event-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#37264a" stroke-width="0.75" stroke-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#event-bg)"/>
+  <rect width="1200" height="675" fill="url(#event-grid)"/>
+
+  <!-- Top Title Bar -->
+  <rect x="40" y="30" width="1120" height="60" rx="10" fill="#17111f" stroke="#37264a" stroke-width="1.5"/>
+  <circle cx="70" cy="60" r="6" fill="#ef4444"/>
+  <circle cx="92" cy="60" r="6" fill="#f59e0b"/>
+  <circle cx="114" cy="60" r="6" fill="#10b981"/>
+  <text x="145" y="65" fill="#f472b6" font-family="monospace" font-size="14" font-weight="600">event-ticketing // CRYPTOGRAPHIC QR CODE VERIFICATION &amp; ACCESS CONTROL</text>
+  <rect x="910" y="45" width="230" height="30" rx="6" fill="#ec4899" fill-opacity="0.15" stroke="#ec4899" stroke-width="1"/>
+  <text x="930" y="65" fill="#f472b6" font-family="monospace" font-size="12" font-weight="700">● GATE SCANNER ENGINE</text>
+
+  <!-- Left: Digital Ticket Pass with Cryptographic QR Code -->
+  <g transform="translate(40, 110)">
+    <rect width="520" height="525" rx="12" fill="url(#event-card)" stroke="#37264a" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#fdf2f8" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Cryptographic Single-Use Digital Pass</text>
+    <text x="30" y="65" fill="#f472b6" font-family="monospace" font-size="12">HMAC-SHA256 Signed Nonce // Anti-Counterfeit Guard</text>
+
+    <!-- Ticket Pass Mockup -->
+    <g transform="translate(45, 95)">
+      <rect width="430" height="260" rx="12" fill="#0d0914" stroke="#ec4899" stroke-width="1.5"/>
+
+      <!-- Event Header -->
+      <rect width="430" height="65" rx="12" fill="#2d1538"/>
+      <text x="25" y="32" fill="#fdf2f8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">TechSummit India 2025 // Main Stage</text>
+      <text x="25" y="52" fill="#f472b6" font-family="monospace" font-size="11">Tier: VIP Delegate Pass (All-Access)</text>
+
+      <!-- Ticket Body -->
+      <text x="25" y="95" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">ATTENDEE NAME</text>
+      <text x="25" y="115" fill="#fdf2f8" font-family="system-ui, sans-serif" font-size="14" font-weight="600">Vikram Malhotra</text>
+
+      <text x="25" y="145" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">GATE &amp; SEAT</text>
+      <text x="25" y="165" fill="#fdf2f8" font-family="monospace" font-size="13">GATE 4A // ROW D - 18</text>
+
+      <!-- QR Code Mock Graphic -->
+      <g transform="translate(260, 80)">
+        <rect width="140" height="140" rx="6" fill="#ffffff"/>
+        <!-- QR Finder Patterns -->
+        <rect x="10" y="10" width="35" height="35" fill="#000000"/>
+        <rect x="17" y="17" width="21" height="21" fill="#ffffff"/>
+        <rect x="22" y="22" width="11" height="11" fill="#000000"/>
+
+        <rect x="95" y="10" width="35" height="35" fill="#000000"/>
+        <rect x="102" y="17" width="21" height="21" fill="#ffffff"/>
+        <rect x="107" y="22" width="11" height="11" fill="#000000"/>
+
+        <rect x="10" y="95" width="35" height="35" fill="#000000"/>
+        <rect x="17" y="102" width="21" height="21" fill="#ffffff"/>
+        <rect x="22" y="107" width="11" height="11" fill="#000000"/>
+
+        <!-- QR Data Matrix Dots -->
+        <rect x="55" y="15" width="8" height="8" fill="#000000"/>
+        <rect x="70" y="15" width="8" height="8" fill="#000000"/>
+        <rect x="55" y="35" width="8" height="8" fill="#000000"/>
+        <rect x="80" y="35" width="8" height="8" fill="#000000"/>
+        <rect x="20" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="40" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="60" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="80" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="100" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="120" y="55" width="8" height="8" fill="#000000"/>
+        <rect x="55" y="75" width="8" height="8" fill="#000000"/>
+        <rect x="75" y="75" width="8" height="8" fill="#000000"/>
+        <rect x="95" y="75" width="8" height="8" fill="#000000"/>
+        <rect x="115" y="75" width="8" height="8" fill="#000000"/>
+        <rect x="55" y="95" width="8" height="8" fill="#000000"/>
+        <rect x="75" y="105" width="8" height="8" fill="#000000"/>
+        <rect x="95" y="105" width="8" height="8" fill="#000000"/>
+        <rect x="115" y="95" width="8" height="8" fill="#000000"/>
+        <rect x="75" y="120" width="8" height="8" fill="#000000"/>
+        <rect x="105" y="120" width="8" height="8" fill="#000000"/>
+      </g>
+
+      <!-- Hash signature string -->
+      <text x="25" y="240" fill="#38bdf8" font-family="monospace" font-size="10">SIGN: 8f9b4c02e71d3a55a82... [VALID]</text>
+    </g>
+
+    <!-- Lower info -->
+    <g transform="translate(45, 380)">
+      <rect width="430" height="115" rx="8" fill="#0d0914" stroke="#37264a"/>
+      <text x="20" y="30" fill="#f472b6" font-family="monospace" font-size="11">// Anti-Replay Attack Architecture</text>
+      <text x="20" y="55" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12">Single-use state flag flipped immediately upon gate scan.</text>
+      <text x="20" y="78" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12">Duplicate screenshots or forwarded passes flagged in &lt;50ms.</text>
+      <text x="20" y="100" fill="#10b981" font-family="monospace" font-size="11">✓ Zero double-entry admissions recorded</text>
+    </g>
+  </g>
+
+  <!-- Right: Gate Scanner Camera View & Real-Time Admission Feed -->
+  <g transform="translate(590, 110)">
+    <rect width="570" height="525" rx="12" fill="url(#event-card)" stroke="#37264a" stroke-width="1.5"/>
+    <text x="30" y="40" fill="#fdf2f8" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Gate Verification Scanner Terminal</text>
+    <text x="30" y="65" fill="#f472b6" font-family="monospace" font-size="12">Sub-200ms optical scanning via WebRTC Video Stream</text>
+
+    <!-- Camera Viewport Box -->
+    <g transform="translate(30, 95)">
+      <rect width="510" height="220" rx="10" fill="#07040a" stroke="#ec4899" stroke-width="1.5"/>
+
+      <!-- Camera Aim Reticle -->
+      <path d="M 180 50 L 150 50 L 150 80" stroke="#38bdf8" stroke-width="3" fill="none"/>
+      <path d="M 330 50 L 360 50 L 360 80" stroke="#38bdf8" stroke-width="3" fill="none"/>
+      <path d="M 150 140 L 150 170 L 180 170" stroke="#38bdf8" stroke-width="3" fill="none"/>
+      <path d="M 360 140 L 360 170 L 330 170" stroke="#38bdf8" stroke-width="3" fill="none"/>
+
+      <!-- Scan laser beam -->
+      <line x1="160" y1="110" x2="350" y2="110" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4,2"/>
+
+      <!-- Scan verification banner -->
+      <rect x="135" y="75" width="240" height="70" rx="8" fill="#064e3b" fill-opacity="0.85" stroke="#10b981" stroke-width="1.5"/>
+      <text x="165" y="105" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="14" font-weight="700">✓ ADMISSION GRANTED</text>
+      <text x="175" y="125" fill="#34d399" font-family="monospace" font-size="11">Pass Verified: #TS-9021</text>
+    </g>
+
+    <!-- Real-time Admission Metrics -->
+    <g transform="translate(30, 335)">
+      <g transform="translate(0, 0)">
+        <rect width="160" height="85" rx="6" fill="#0d0914" stroke="#37264a"/>
+        <text x="15" y="25" fill="#f472b6" font-family="monospace" font-size="11">CHECK-IN SPEED</text>
+        <text x="15" y="55" fill="#34d399" font-family="monospace" font-size="24" font-weight="700">180 ms</text>
+        <text x="15" y="75" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Per attendee scan</text>
+      </g>
+
+      <g transform="translate(175, 0)">
+        <rect width="160" height="85" rx="6" fill="#0d0914" stroke="#37264a"/>
+        <text x="15" y="25" fill="#f472b6" font-family="monospace" font-size="11">ADMITTED TODAY</text>
+        <text x="15" y="55" fill="#38bdf8" font-family="monospace" font-size="24" font-weight="700">1,480</text>
+        <text x="15" y="75" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Of 1,500 Capacity</text>
+      </g>
+
+      <g transform="translate(350, 0)">
+        <rect width="160" height="85" rx="6" fill="#0d0914" stroke="#37264a"/>
+        <text x="15" y="25" fill="#f472b6" font-family="monospace" font-size="11">REPLAY BLOCKS</text>
+        <text x="15" y="55" fill="#ec4899" font-family="monospace" font-size="24" font-weight="700">24 Dups</text>
+        <text x="15" y="75" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Intercepted &amp; barred</text>
+      </g>
+    </g>
+
+    <!-- Operational Log -->
+    <g transform="translate(30, 440)">
+      <rect width="510" height="55" rx="6" fill="#09060e" stroke="#37264a"/>
+      <text x="15" y="32" fill="#10b981" font-family="monospace" font-size="11">[GATE 4A] Scan throughput operating at 22 attendees/minute without queuing</text>
+    </g>
+  </g>
+</svg>

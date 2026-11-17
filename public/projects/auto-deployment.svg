@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f18"/>
+      <stop offset="50%" stop-color="#101826"/>
+      <stop offset="100%" stop-color="#141f30"/>
+    </linearGradient>
+    <pattern id="grid2" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.6"/>
+    </pattern>
+    <linearGradient id="card-grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131c2e"/>
+      <stop offset="100%" stop-color="#0d1522"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+  <rect width="1200" height="675" fill="url(#grid2)"/>
+
+  <!-- Top Title / Terminal Bar -->
+  <rect x="40" y="30" width="1120" height="60" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <circle cx="70" cy="60" r="6" fill="#ef4444"/>
+  <circle cx="92" cy="60" r="6" fill="#f59e0b"/>
+  <circle cx="114" cy="60" r="6" fill="#10b981"/>
+  <text x="145" y="65" fill="#94a3b8" font-family="monospace" font-size="14" font-weight="600">auto-deployment-system // CLOUD ORCHESTRATION &amp; CONTAINER RUNTIME</text>
+  <rect x="910" y="45" width="230" height="30" rx="6" fill="#0ea5e9" fill-opacity="0.15" stroke="#0ea5e9" stroke-width="1"/>
+  <text x="930" y="65" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="700">● MULTI-TENANT DOCKER</text>
+
+  <!-- Main Pipeline Flow Architecture -->
+  <g transform="translate(40, 110)">
+    <rect width="1120" height="250" rx="12" fill="url(#card-grad2)" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="30" y="35" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Continuous Automated Deployment Pipeline</text>
+    <text x="30" y="58" fill="#64748b" font-family="monospace" font-size="12">Git Webhook Trigger → Ephemeral Worker Clone → Multi-Stage Docker Build → Nginx Ingress</text>
+
+    <!-- Stage 1: GitHub Webhook -->
+    <g transform="translate(35, 80)">
+      <rect width="180" height="135" rx="8" fill="#0b1120" stroke="#38bdf8" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="14" fill="#0284c7" fill-opacity="0.2"/>
+      <path d="M 28 35 L 42 35 M 35 28 L 35 42" stroke="#38bdf8" stroke-width="2"/>
+      <text x="60" y="38" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Git Event</text>
+      <text x="20" y="70" fill="#94a3b8" font-family="monospace" font-size="11">Webhook Payload</text>
+      <text x="20" y="90" fill="#64748b" font-family="monospace" font-size="10">Branch: main</text>
+      <text x="20" y="110" fill="#10b981" font-family="monospace" font-size="11">SHA: a7f89c0</text>
+    </g>
+
+    <!-- Flow Arrow 1 -->
+    <path d="M 225 150 L 260 150" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="260,146 268,150 260,154" fill="#38bdf8"/>
+
+    <!-- Stage 2: Build Worker -->
+    <g transform="translate(275, 80)">
+      <rect width="195" height="135" rx="8" fill="#0b1120" stroke="#0ea5e9" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="14" fill="#0284c7" fill-opacity="0.2"/>
+      <text x="60" y="38" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Node Builder</text>
+      <text x="20" y="70" fill="#94a3b8" font-family="monospace" font-size="11">Isolated Workdir</text>
+      <text x="20" y="90" fill="#64748b" font-family="monospace" font-size="10">npm install &amp; build</text>
+      <text x="20" y="110" fill="#38bdf8" font-family="monospace" font-size="11">Exit code: 0 [PASS]</text>
+    </g>
+
+    <!-- Flow Arrow 2 -->
+    <path d="M 480 150 L 515 150" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="515,146 523,150 515,154" fill="#0ea5e9"/>
+
+    <!-- Stage 3: Docker Container -->
+    <g transform="translate(530, 80)">
+      <rect width="210" height="135" rx="8" fill="#0b1120" stroke="#10b981" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="14" fill="#059669" fill-opacity="0.2"/>
+      <text x="60" y="38" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Docker Engine</text>
+      <text x="20" y="70" fill="#94a3b8" font-family="monospace" font-size="11">Container ID: 4f88e</text>
+      <text x="20" y="90" fill="#64748b" font-family="monospace" font-size="10">Bridge Net: 172.18.0.4</text>
+      <text x="20" y="110" fill="#10b981" font-family="monospace" font-size="11">Allocated Port: 8084</text>
+    </g>
+
+    <!-- Flow Arrow 3 -->
+    <path d="M 750 150 L 785 150" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4"/>
+    <polygon points="785,146 793,150 785,154" fill="#10b981"/>
+
+    <!-- Stage 4: Nginx Reverse Proxy -->
+    <g transform="translate(800, 80)">
+      <rect width="285" height="135" rx="8" fill="#0b1120" stroke="#a855f7" stroke-width="1.5"/>
+      <circle cx="35" cy="35" r="14" fill="#7c3aed" fill-opacity="0.2"/>
+      <text x="60" y="38" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Nginx Dynamic Ingress</text>
+      <text x="20" y="70" fill="#94a3b8" font-family="monospace" font-size="11">Auto vHost Generation</text>
+      <text x="20" y="90" fill="#c084fc" font-family="monospace" font-size="11">app-4f88e.deploy.internal</text>
+      <text x="20" y="110" fill="#10b981" font-family="monospace" font-size="11">SSL Cert: Let's Encrypt</text>
+    </g>
+  </g>
+
+  <!-- Lower Section: Live Console & Metrics Dashboard -->
+  <g transform="translate(40, 380)">
+    <!-- Terminal Logs -->
+    <rect width="680" height="255" rx="10" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+    <rect width="680" height="32" rx="10" fill="#111827"/>
+    <text x="20" y="21" fill="#64748b" font-family="monospace" font-size="11">stdout // auto-deploy-daemon.log</text>
+    <text x="20" y="60" fill="#38bdf8" font-family="monospace" font-size="12">[10:14:02] Hook verified: repo=auto-deployment-system branch=main</text>
+    <text x="20" y="85" fill="#94a3b8" font-family="monospace" font-size="12">[10:14:04] Cloning shallow workspace /tmp/builds/app_9918...</text>
+    <text x="20" y="110" fill="#f59e0b" font-family="monospace" font-size="12">[10:14:15] Multi-stage Dockerfile build initiated (Target: Alpine-Node:20)</text>
+    <text x="20" y="135" fill="#94a3b8" font-family="monospace" font-size="12">[10:14:32] Step 4/7: Vite bundle compiled in 4.21s (0 errors)</text>
+    <text x="20" y="160" fill="#10b981" font-family="monospace" font-size="12">[10:14:34] Container started on virtual bridge -> Assigned Port 8084</text>
+    <text x="20" y="185" fill="#38bdf8" font-family="monospace" font-size="12">[10:14:35] Reloading Nginx upstream configs: nginx -s reload [SUCCESS]</text>
+    <text x="20" y="210" fill="#10b981" font-family="monospace" font-size="12">[10:14:36] Domain live: https://demo-77.harshdeploy.cloud (200 OK)</text>
+
+    <!-- Side Metrics Panel -->
+    <g transform="translate(710, 0)">
+      <rect width="410" height="255" rx="10" fill="url(#card-grad2)" stroke="#1e293b" stroke-width="1.5"/>
+      <text x="25" y="35" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Cluster Telemetry &amp; Stats</text>
+
+      <g transform="translate(25, 60)">
+        <rect width="170" height="75" rx="6" fill="#0b1120" stroke="#1e293b"/>
+        <text x="15" y="25" fill="#64748b" font-family="monospace" font-size="11">DEPLOY TIME</text>
+        <text x="15" y="55" fill="#38bdf8" font-family="monospace" font-size="24" font-weight="700">~34s</text>
+      </g>
+
+      <g transform="translate(215, 60)">
+        <rect width="170" height="75" rx="6" fill="#0b1120" stroke="#1e293b"/>
+        <text x="15" y="25" fill="#64748b" font-family="monospace" font-size="11">ACTIVE APPS</text>
+        <text x="15" y="55" fill="#10b981" font-family="monospace" font-size="24" font-weight="700">18</text>
+      </g>
+
+      <g transform="translate(25, 150)">
+        <rect width="360" height="80" rx="6" fill="#0b1120" stroke="#1e293b"/>
+        <text x="20" y="30" fill="#64748b" font-family="monospace" font-size="11">NGINX PROXY ROUTING UPTIME</text>
+        <text x="20" y="58" fill="#10b981" font-family="monospace" font-size="22" font-weight="700">99.95%</text>
+        <text x="140" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Zero-downtime reloads</text>
+      </g>
+    </g>
+  </g>
+</svg>
