@@ -1,73 +1,53 @@
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Star, Code2 } from 'lucide-react';
 import { GithubIcon } from '../components/BrandIcons';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { SectionTitle } from '../components/SectionTitle';
 import { ProjectModal } from '../components/ProjectModal';
-import { projects, filterTags } from '../data/projects';
+import { projects } from '../data/projects';
 import type { Project } from '../types';
 
 export function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [query, setQuery] = useState('');
+  const [featuredOnly, setFeaturedOnly] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  // DevOps filter bug fix: match both stack array and category string
-  const filtered = useMemo(() => {
-    if (activeFilter === 'All') return projects;
-    const query = activeFilter.toLowerCase();
-    return projects.filter(
-      (p) =>
-        p.stack.some((s) => s.toLowerCase().includes(query)) ||
-        (p.category && p.category.toLowerCase().includes(query))
-    );
-  }, [activeFilter]);
+  const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const filtered = [...projects].sort((a, b) => Number(b.featured) - Number(a.featured)).filter((project) => {
+    const searchable = [project.title, project.category, project.description, ...project.stack].join(' ').toLowerCase();
+    return (!featuredOnly || project.featured) && terms.every((term) => searchable.includes(term));
+  });
 
   return (
     <AnimatedSection id="projects" className="py-24 md:py-32 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionTitle
-          label="Featured Work"
-          title="Key Engineering Projects"
-          subtitle="Production platforms, automated deployment engines, and distributed web applications built with modern engineering standards."
+          label="Portfolio"
+          title="Engineering Projects"
+          subtitle="Explore what I built, the problems each project solves, and how the systems fit together."
         />
 
-        {/* Filter bar with animated sliding indicator */}
-        <div
-          className="flex flex-wrap gap-2 mb-10"
-          role="group"
-          aria-label="Filter projects by technology"
-        >
-          {filterTags.map((tag) => {
-            const isActive = activeFilter === tag;
-            return (
-              <button
-                key={tag}
-                onClick={() => setActiveFilter(tag)}
-                aria-pressed={isActive}
-                className={`relative text-xs font-medium px-3.5 py-1.5 rounded-lg border transition-colors duration-150 cursor-pointer ${
-                  isActive
-                    ? 'border-accent-primary text-accent-primary font-semibold shadow-sm'
-                    : 'border-border text-text-muted hover:border-accent-primary hover:text-text-secondary'
-                }`}
-              >
-                {isActive && (
-                  <motion.div
-                    layoutId="activeFilterPill"
-                    className="absolute inset-0 rounded-lg bg-accent-primary-dim -z-10"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
-                <span className="relative z-10">{tag}</span>
-              </button>
-            );
-          })}
+        <div className="mb-8 flex flex-wrap items-end gap-4 border-b border-border pb-5">
+          <label className="flex min-w-0 flex-1 basis-60 flex-col gap-2 text-sm text-text-secondary">
+            Search projects
+            <input type="search" value={query} onChange={(event) => setQuery(event.target.value)}
+              placeholder="Try voice AI, Next.js, or analytics"
+              className="min-h-11 rounded-lg border border-border bg-surface px-3 text-text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-primary" />
+          </label>
+          <label className="flex min-h-11 items-center gap-2 text-sm text-text-secondary">
+            <input type="checkbox" checked={featuredOnly} onChange={(event) => setFeaturedOnly(event.target.checked)}
+              className="accent-accent-primary" />
+            Featured only
+          </label>
+          <p role="status" className="flex min-h-11 items-center text-sm text-text-muted">
+            {filtered.length} of {projects.length} projects
+          </p>
         </div>
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((project, index) => {
+            {filtered.map((project) => {
               const isLive = Boolean(project.liveUrl && project.liveUrl !== '#');
               const isPublicRepo = project.repoStatus === 'public' && Boolean(project.githubUrl);
 
@@ -87,8 +67,7 @@ export function Projects() {
                   {/* Media Preview Header with 16:9 Aspect Ratio */}
                   {project.media && (
                     <div
-                      className="relative w-full aspect-video overflow-hidden bg-surface-2 border-b border-border/70 group-hover:border-accent-primary/40 transition-colors cursor-pointer"
-                      onClick={() => setSelectedProject(project)}
+                      className="relative w-full aspect-video overflow-hidden bg-surface-2 border-b border-border/70 group-hover:border-accent-primary/40 transition-colors"
                     >
                       <img
                         src={project.media.src}
@@ -105,7 +84,7 @@ export function Projects() {
                       {/* Top Overlay Badges */}
                       <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
                         <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-surface/90 text-text-muted border border-border/80 backdrop-blur-md shadow-sm">
-                          {project.liveLabel || `${project.id.replace(/-platform|-system/g, '')}.dev`}
+                          {project.liveLabel || project.category}
                         </span>
 
                         {project.status && (
@@ -144,8 +123,7 @@ export function Projects() {
                       <div>
                         <div className="flex items-center gap-2">
                           <h3
-                            onClick={() => setSelectedProject(project)}
-                            className="text-base sm:text-lg font-bold text-text-primary group-hover:text-accent-primary transition-colors duration-200 cursor-pointer"
+                            className="text-base sm:text-lg font-bold text-text-primary group-hover:text-accent-primary transition-colors duration-200"
                           >
                             {project.title}
                           </h3>
@@ -198,16 +176,12 @@ export function Projects() {
                       </div>
 
                       {/* Action buttons */}
-                      <div className="flex items-center justify-between gap-1.5 pt-2 border-t border-border/50">
+                      <div className="flex flex-wrap items-center justify-between gap-1.5 pt-2 border-t border-border/50">
                         {/* Case Study Trigger Button */}
                         <button
                           type="button"
                           onClick={() => setSelectedProject(project)}
-                          aria-label={
-                            index === 0
-                              ? 'Technical Deep-Dive'
-                              : `Case study for ${project.title}`
-                          }
+                          aria-label={`Case study for ${project.title}`}
                           className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1.5 rounded-lg border border-border bg-surface text-text-primary hover:border-accent-primary hover:text-accent-primary hover:shadow-glow-subtle transition-colors cursor-pointer shrink-0 whitespace-nowrap card-highlight shadow-sm"
                         >
                           <Code2 size={13} className="text-accent-primary" />
@@ -226,12 +200,6 @@ export function Projects() {
                               <span>Live Site</span>
                               <ExternalLink size={12} />
                             </a>
-                          )}
-
-                          {!isLive && (
-                            <span className="inline-flex items-center text-[10px] font-mono text-text-muted px-2 py-1 rounded-md border border-border/40 bg-surface-2/40 whitespace-nowrap">
-                              Architecture Project
-                            </span>
                           )}
 
                           {isPublicRepo && (
@@ -258,7 +226,7 @@ export function Projects() {
 
         {filtered.length === 0 && (
           <p className="text-center text-text-muted py-16">
-            No projects match this technology filter.
+            No projects match. Try a different search or clear Featured only.
           </p>
         )}
       </div>

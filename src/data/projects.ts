@@ -401,5 +401,3 @@ export const projects: Project[] = [
     },
   },
 ];
-
-export const filterTags = ['All', 'React.js', 'Node.js', 'Docker', 'MongoDB', 'Razorpay', 'DevOps'];
