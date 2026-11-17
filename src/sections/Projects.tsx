@@ -1,18 +1,12 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../components/BrandIcons';
 import { SectionTitle } from '../components/SectionTitle';
-import { ProjectModal } from '../components/ProjectModal';
-import { projects } from '../data/projects';
-import type { Project } from '../types';
-
-const visibleProjects = projects.filter((project) => project.availability !== 'offline');
+import { projectPath, visibleProjects } from '../project-pages';
 
 export function Projects() {
   const [query, setQuery] = useState('');
   const [featuredOnly, setFeaturedOnly] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const closeCaseStudy = useCallback(() => setSelectedProject(null), []);
   const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const filtered = [...visibleProjects].sort((a, b) => Number(b.media?.type === 'image') - Number(a.media?.type === 'image') || Number(b.featured) - Number(a.featured)).filter((project) => {
     const searchable = [project.title, project.category, project.description, ...project.stack].join(' ').toLowerCase();
@@ -61,11 +55,11 @@ export function Projects() {
               <p className="text-sm text-text-muted">{project.category}</p>
               <h3 className="portfolio-display mt-1 flex items-center gap-3 text-3xl text-text-primary">
                 {project.icon && <img src={project.icon} alt="" width={32} height={32} loading="lazy" className="size-8 shrink-0 object-contain" />}
-                <button type="button" onClick={() => setSelectedProject(project)}
+                <a href={projectPath(project)}
                   aria-label={`Open case study for ${project.title}`}
                   className="text-left hover:text-accent-primary after:absolute after:inset-0 after:cursor-pointer focus-visible:after:ring-2 focus-visible:after:ring-accent-primary">
                   {project.title}
-                </button>
+                </a>
               </h3>
               <p className="mt-2 max-w-prose text-sm leading-relaxed text-text-secondary">{project.description}</p>
               <ul className="mt-4 flex flex-wrap gap-2" aria-label="Technologies">
@@ -97,12 +91,6 @@ export function Projects() {
         )}
       </div>
 
-      {/* Technical Deep-Dive Modal */}
-      <ProjectModal
-        project={selectedProject}
-        isOpen={selectedProject !== null}
-        onClose={closeCaseStudy}
-      />
     </section>
   );
 }
