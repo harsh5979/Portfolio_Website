@@ -95,3 +95,51 @@
 .project-preview { aspect-ratio: 16 / 10; background: #eaece2; }
 .project-preview img { width: 100%; height: 100%; object-fit: contain; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* The contour lines stay on the right so the introduction keeps a clean backdrop. */
+.hero-field-contours {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 30%, #000 78%);
+}
+
+.hero-field-contours::before {
+  content: "";
+  position: absolute;
+  width: min(84rem, 115vw);
+  aspect-ratio: 1;
+  right: -23%;
+  top: -85%;
+  opacity: .65;
+  background:
+    repeating-radial-gradient(ellipse at center, transparent 0 28px, #3279572e 29px 30px),
+    radial-gradient(ellipse at center, #c6ddc5 5%, transparent 68%);
+  transform: rotate(-22deg) scaleY(.58);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-field-contours::before {
+    animation: contour-drift 4.8s ease-out both;
+  }
+}
+
+@keyframes contour-drift {
+  from { transform: translate(3%, -2%) rotate(-17deg) scaleY(.58); opacity: .22; }
+  to { transform: rotate(-22deg) scaleY(.58); opacity: .65; }
+}
+
+@media (max-width: 767px) {
+  .hero-field-contours {
+    mask-image: linear-gradient(135deg, transparent 30%, #000 95%);
+  }
+
+  .hero-field-contours::before {
+    top: auto;
+    bottom: -28%;
+    right: -42%;
+    opacity: .45;
+  }
+}
