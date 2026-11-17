@@ -4,6 +4,7 @@ export const projects: Project[] = [
   {
     id: 'northsoul-clothing',
     title: 'NorthSoul Clothing',
+    icon: '/project-icons/northsoul.png',
     category: 'Full Stack E-Commerce',
     status: 'Live Production',
     period: 'Oct 2025 – Nov 2025',
@@ -89,7 +90,8 @@ export const projects: Project[] = [
   },
   {
     id: 'rag-hh-goa',
-    title: 'Real-Time Voice Screening & RAG Engine',
+    title: 'VoiceRAG Studio',
+    icon: '/project-icons/voicerag.svg',
     category: 'AI & Distributed Systems',
     status: 'AI Voice Engine',
     period: 'Jul 2024 – Present',
@@ -104,7 +106,7 @@ export const projects: Project[] = [
     stack: ['FastAPI', 'Next.js', 'FAISS', 'PyTorch', 'Docker', 'WebSockets', 'Python'],
     githubUrl: 'https://github.com/harsh5979/rag-hh-goa',
     repoStatus: 'public',
-    liveUrl: '#',
+    liveUrl: 'https://voicerag.northsoulclothing.site',
     featured: true,
     media: {
       type: 'architecture',
@@ -178,7 +180,8 @@ export const projects: Project[] = [
   },
   {
     id: 'e-mess-modasa',
-    title: 'E-Mess-Modasa',
+    title: 'E-Mess Modasa',
+    icon: '/project-icons/emess.svg',
     category: 'Hostel Billing SaaS',
     status: 'Live Production',
     period: 'Sep 2024 – Present',
@@ -397,7 +400,8 @@ export const projects: Project[] = [
   },
   {
     id: "diwali",
-    title: "Diwali Call Assistant",
+    title: 'Vatchit Voice (Diwali)',
+    icon: '/project-icons/vatchit.svg',
     category: "Voice AI",
     period: '2026',
     description: "Outbound AI calls with live conversation in Gujarati, Hindi, English, and Marathi.",
@@ -415,7 +419,8 @@ export const projects: Project[] = [
   },
   {
     id: "leppy",
-    title: "Leppy AI",
+    title: 'Leppy AI',
+    icon: '/project-icons/leppy.ico',
     category: "Education SaaS",
     period: '2026',
     description: "Spoken English practice and class management for learners and coaching academies.",
@@ -431,7 +436,9 @@ export const projects: Project[] = [
   },
   {
     id: "workforce-pulse",
-    title: "Workforce Pulse",
+    title: 'Workforce Pulse',
+    icon: '/project-icons/workforce.svg',
+    liveUrl: 'https://workforce.northsoulclothing.site',
     category: "Analytics",
     period: '2026',
     description: "Workforce activity dashboards with an AI assistant that answers questions from the underlying dataset.",
@@ -447,7 +454,8 @@ export const projects: Project[] = [
   },
   {
     id: "tools",
-    title: "Browser Utility Toolkit",
+    title: 'Document Studio',
+    icon: '/project-icons/document-studio.ico',
     category: "Developer Tools",
     period: '2026',
     description: "Image and document conversion tools that process files locally in the browser.",

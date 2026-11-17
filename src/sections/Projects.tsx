@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../components/BrandIcons';
 import { SectionTitle } from '../components/SectionTitle';
@@ -6,12 +6,15 @@ import { ProjectModal } from '../components/ProjectModal';
 import { projects } from '../data/projects';
 import type { Project } from '../types';
 
+const visibleProjects = projects.filter((project) => project.availability !== 'offline');
+
 export function Projects() {
   const [query, setQuery] = useState('');
   const [featuredOnly, setFeaturedOnly] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const closeCaseStudy = useCallback(() => setSelectedProject(null), []);
   const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-  const filtered = [...projects].sort((a, b) => Number(b.media?.type === 'image') - Number(a.media?.type === 'image') || Number(b.featured) - Number(a.featured)).filter((project) => {
+  const filtered = [...visibleProjects].sort((a, b) => Number(b.media?.type === 'image') - Number(a.media?.type === 'image') || Number(b.featured) - Number(a.featured)).filter((project) => {
     const searchable = [project.title, project.category, project.description, ...project.stack].join(' ').toLowerCase();
     return (!featuredOnly || project.featured) && terms.every((term) => searchable.includes(term));
   });
@@ -38,13 +41,13 @@ export function Projects() {
             Featured only
           </label>
           <p role="status" className="flex min-h-11 items-center text-sm text-text-muted">
-            {filtered.length} of {projects.length} projects
+            {filtered.length} of {visibleProjects.length} projects
           </p>
         </div>
 
         <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
           {filtered.map((project) => (
-            <article key={project.id} className="min-w-0 border-b border-border pb-6">
+            <article key={project.id} className="relative isolate min-w-0 border-b border-border pb-6">
               {project.media && (
                 <figure className="mb-4">
                   <div className="project-preview overflow-hidden rounded-md border border-border">
@@ -56,7 +59,14 @@ export function Projects() {
                 </figure>
               )}
               <p className="text-sm text-text-muted">{project.category}</p>
-              <h3 className="portfolio-display mt-1 text-3xl text-text-primary">{project.title}</h3>
+              <h3 className="portfolio-display mt-1 flex items-center gap-3 text-3xl text-text-primary">
+                {project.icon && <img src={project.icon} alt="" width={32} height={32} loading="lazy" className="size-8 shrink-0 object-contain" />}
+                <button type="button" onClick={() => setSelectedProject(project)}
+                  aria-label={`Open case study for ${project.title}`}
+                  className="text-left hover:text-accent-primary after:absolute after:inset-0 after:cursor-pointer focus-visible:after:ring-2 focus-visible:after:ring-accent-primary">
+                  {project.title}
+                </button>
+              </h3>
               <p className="mt-2 max-w-prose text-sm leading-relaxed text-text-secondary">{project.description}</p>
               <ul className="mt-4 flex flex-wrap gap-2" aria-label="Technologies">
                 {project.stack.slice(0, 4).map((tech) => (
@@ -64,16 +74,14 @@ export function Projects() {
                 ))}
               </ul>
               <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
-                <button type="button" onClick={() => setSelectedProject(project)}
-                  aria-label={`Case study for ${project.title}`}
-                  className="min-h-11 text-sm font-semibold text-accent-primary underline underline-offset-4">Case study</button>
+                <span className="inline-flex min-h-11 items-center text-sm font-semibold text-accent-primary">View case study</span>
                 {project.liveUrl && project.liveUrl !== '#' && (
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-medium">
+                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="relative z-10 inline-flex min-h-11 items-center gap-1 text-sm font-medium underline-offset-4 hover:underline">
                     Live site <ExternalLink size={13} aria-hidden="true" />
                   </a>
                 )}
                 {project.repoStatus === 'public' && project.githubUrl && (
-                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-1 text-sm font-medium">
+                  <a href={project.githubUrl} target="_blank" rel="noreferrer" className="relative z-10 inline-flex min-h-11 items-center gap-1 text-sm font-medium underline-offset-4 hover:underline">
                     <GithubIcon size={14} /> Source
                   </a>
                 )}
@@ -93,7 +101,7 @@ export function Projects() {
       <ProjectModal
         project={selectedProject}
         isOpen={selectedProject !== null}
-        onClose={() => setSelectedProject(null)}
+        onClose={closeCaseStudy}
       />
     </section>
   );

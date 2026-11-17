@@ -30,6 +30,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   useEffect(() => {
     if (!isOpen) return;
 
+    const opener = document.activeElement;
     // Small delay to ensure DOM element is mounted and ready for focus
     const timer = setTimeout(() => {
       closeBtnRef.current?.focus();
@@ -69,6 +70,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
     return () => {
       clearTimeout(timer);
       window.removeEventListener('keydown', handleKeyDown);
+      if (opener instanceof HTMLElement && opener.isConnected) opener.focus();
     };
   }, [isOpen, onClose]);
 

@@ -25,6 +25,8 @@ export interface Project {
   githubUrl?: string;
   repoStatus?: 'public' | 'private' | 'architecture';
   liveUrl?: string;
+  icon?: string;
+  availability?: 'offline';
   liveLabel?: string;
   featured: boolean;
   media?: ProjectMedia;
