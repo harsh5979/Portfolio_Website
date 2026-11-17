@@ -53,32 +53,43 @@ export function projectPage(project: Project, stylesheet: string) {
       <a href="/#projects" class="font-semibold text-accent-primary underline underline-offset-4">Back to projects</a>
     </nav>
   </header>
-  <main class="mx-auto max-w-5xl px-5 py-12">
+  <main class="mx-auto max-w-6xl px-5 py-8 md:py-12">
     <article class="space-y-8">
+      <div class="case-study-intro ${project.media ? 'case-study-intro-with-media' : ''}">
       <header class="max-w-3xl">
         <p class="text-sm text-text-muted">${escape(project.category || 'Engineering project')} · ${escape(project.period)}</p>
-        <h1 class="portfolio-display mt-3 text-5xl leading-none md:text-7xl">${title}</h1>
+        <h1 class="portfolio-display mt-3 text-4xl leading-none lg:text-6xl">${title}</h1>
         <p class="mt-4 text-lg leading-relaxed text-text-secondary">${description}</p>
         ${live || source ? `<div class="mt-5 flex flex-wrap gap-5 text-sm font-semibold text-accent-primary">
           ${live ? `<a class="underline underline-offset-4" href="${escape(live)}">Visit live site</a>` : ''}
           ${source ? `<a class="underline underline-offset-4" href="${escape(source)}">View source code</a>` : ''}
         </div>` : ''}
+        <nav aria-label="Case study sections" class="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
+          ${details ? '<a class="underline underline-offset-4" href="#implementation">Implementation</a>' : ''}
+          <a class="underline underline-offset-4" href="#features">Features</a>
+          <a class="underline underline-offset-4" href="#stack">Stack</a>
+        </nav>
       </header>
       ${project.media ? `<figure>
-        <div class="project-preview overflow-hidden rounded-md border border-border">
+        <div class="case-study-media overflow-hidden rounded-lg border border-border">
           <img src="${escape(project.media.src)}" alt="${escape(project.media.alt)}" decoding="async">
         </div>
         <figcaption class="mt-2 text-sm text-text-muted">${project.media.type === 'image' ? 'Public website screenshot' : 'Project illustration'}</figcaption>
       </figure>` : ''}
-      <div class="grid gap-8 md:grid-cols-[2fr_1fr]">
+      </div>
+      <div id="implementation" class="grid scroll-mt-5 gap-8 md:grid-cols-[2fr_1fr]">
         <div class="space-y-7">
           ${details ? section('The problem', details.problem) + section('What I built', details.solution) + section('How it works', details.architecture) : ''}
-          <section class="border-t border-border pt-5">
+          <section id="features" class="scroll-mt-5 border-t border-border pt-5">
             <h2 class="portfolio-display text-3xl">Key features</h2>
             <ul class="mt-3 list-disc space-y-2 pl-5 text-text-secondary">${list(project.features)}</ul>
           </section>
+          ${details?.highlights.length ? `<details class="case-study-details border-y border-border py-4">
+            <summary class="cursor-pointer font-semibold text-accent-primary">Engineering notes</summary>
+            <ul class="mt-3 list-disc space-y-2 pl-5 text-text-secondary">${list(details.highlights)}</ul>
+          </details>` : ''}
         </div>
-        <aside class="border-t border-border pt-5" aria-label="Technology stack">
+        <aside id="stack" class="border-t border-border pt-5" aria-label="Technology stack">
           <h2 class="portfolio-display text-3xl">Stack</h2>
           <ul class="mt-3 space-y-2 text-text-secondary">${list(project.stack)}</ul>
         </aside>

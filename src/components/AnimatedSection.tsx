@@ -1,4 +1,4 @@
-import { motion, type HTMLMotionProps } from 'framer-motion';
+import { motion, useReducedMotion, type HTMLMotionProps } from 'framer-motion';
 import { type ReactNode } from 'react';
 
 interface AnimatedSectionProps extends HTMLMotionProps<'section'> {
@@ -8,12 +8,13 @@ interface AnimatedSectionProps extends HTMLMotionProps<'section'> {
 }
 
 export function AnimatedSection({ children, className = '', delay = 0, ...rest }: AnimatedSectionProps) {
+  const reducedMotion = useReducedMotion();
   return (
     <motion.section
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      initial={reducedMotion ? false : { y: 9 }}
+      whileInView={reducedMotion ? undefined : { y: 0 }}
+      viewport={{ once: true }}
+      transition={{ type: 'spring', stiffness: 165, damping: 25, delay }}
       className={className}
       {...rest}
     >

@@ -1,3 +1,5 @@
+import { AnimatedSection } from '../components/AnimatedSection';
+
 const releaseSteps = [
   {
     title: 'Check the change',
@@ -15,7 +17,7 @@ const releaseSteps = [
 
 export function DevOps() {
   return (
-    <section id="devops" className="scroll-mt-24 border-t border-border bg-surface/50 py-16 md:py-20">
+    <AnimatedSection id="devops" className="scroll-mt-24 border-t border-border bg-surface/50 py-16 md:py-20">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-[1fr_1.4fr] md:gap-12 md:px-8">
         <div>
           <h2 className="portfolio-display text-4xl text-text-primary md:text-5xl">How I ship</h2>
@@ -35,6 +37,6 @@ export function DevOps() {
           ))}
         </ol>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

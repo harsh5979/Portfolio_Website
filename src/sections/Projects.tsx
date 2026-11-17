@@ -1,3 +1,5 @@
+import { AnimatedSection } from '../components/AnimatedSection';
+
 import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../components/BrandIcons';
@@ -14,7 +16,7 @@ export function Projects() {
   });
 
   return (
-    <section id="projects" className="border-t border-border py-14 md:py-20 scroll-mt-24">
+    <AnimatedSection id="projects" className="border-t border-border py-14 md:py-20 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8">
         <SectionTitle
           label="Portfolio"
@@ -41,7 +43,7 @@ export function Projects() {
 
         <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
           {filtered.map((project) => (
-            <article key={project.id} className="relative isolate min-w-0 border-b border-border pb-6">
+            <article key={project.id} className="portfolio-project-card relative isolate min-w-0 border-b border-border pb-6">
               {project.media && (
                 <figure className="mb-4">
                   <div className="project-preview overflow-hidden rounded-md border border-border">
@@ -91,6 +93,6 @@ export function Projects() {
         )}
       </div>
 
-    </section>
+    </AnimatedSection>
   );
 }
